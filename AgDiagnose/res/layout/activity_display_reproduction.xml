@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/Background" >
+    
+    
+    
+    <Button
+        android:id="@+id/cowDiseasesView"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="107dp"
+        android:background="@drawable/cow" />
+    
+     <Button
+        android:id="@+id/sheepDiseasesView"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_alignBaseline="@+id/cowDiseasesView"
+        android:layout_alignBottom="@+id/cowDiseasesView"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/cowDiseasesView"
+        android:background="@drawable/sheep" />
+    
+    
+    
+    
+
+</RelativeLayout>

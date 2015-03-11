@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AgDiagnose</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_diseases">Search Diseases</string>
+    <string name="button_diseases">Diseases</string>
+    <string name="button_diagnose">Diagnose</string>
+    <string name="button_reproduction">Reproduction</string>
+    <string name="button_contact">Contact</string>
+    <string name="todo">To-do</string>
+    <string name="button_cow">Cow</string>
+    <string name="button_calf">Calf</string>
+    <string name="button_sheep">Sheep</string>
+    <string name="button_lamb">Lamb</string>
+    <string name="title_activity_display_diseases">Diseases</string>
+    <string name="title_activity_display_diagnose">Diagnose</string>
+    <string name="title_activity_display_reproduction">Reproduction</string>
+    <string name="title_activity_display_contact">Contact</string>
+    <string name="title_activity_cow_diseases">Cow Diseases</string>
+    <string name="title_activity_calf_diseases">Calf Diseases</string>
+    <string name="title_activity_sheep_diseases">Sheep Diseases</string>
+    <string name="title_activity_lamb_diseases">Lamb Diseases</string>
+    <string name="choose_animal">Choose an animal below</string>
+    <string name="title_activity_diseases_list">Diseases List</string>
+    <string name="title_activity_diseases">Disease Info</string>
+
+</resources>

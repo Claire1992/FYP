@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/Background" >
+
+    <Button
+        android:id="@+id/resp_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="111dp"
+        android:background="@drawable/buttonshape"
+        android:text="Respiratory"
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/skin_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_alignBottom="@+id/resp_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/buttonshape"
+        android:text="Skin, Eyes and Feet "
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/vir_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/resp_btn"
+        android:layout_below="@+id/resp_btn"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/buttonshape"
+        android:text="Viruses and Bacteria"
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/repro_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/skin_btn"
+        android:layout_alignTop="@+id/vir_btn"
+        android:background="@drawable/buttonshape"
+        android:text="Reproductive"
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
+
+</RelativeLayout>
