@@ -99,8 +99,12 @@
             android:label="@string/title_activity_diseases_list" >
         </activity>
         <activity
-            android:name="com.example.agdiagnose.diseases.Diseases"
+            android:name=".diseases.Diseases"
             android:label="@string/title_activity_diseases" >
+        </activity>
+        <activity
+            android:name="com.example.agdiagnose.reproduction.ReproductiveInfo"
+            android:label="@string/title_activity_reproductive_info" >
         </activity>
     </application>
 

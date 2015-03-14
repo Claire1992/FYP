@@ -1,21 +1,36 @@
 package com.example.agdiagnose.reproduction;
 
+import com.example.agdiagnose.Globals;
 import com.example.agdiagnose.R;
 import com.example.agdiagnose.R.id;
 import com.example.agdiagnose.R.layout;
 import com.example.agdiagnose.R.menu;
+import com.example.agdiagnose.diseases.CalfCategory;
+import com.example.agdiagnose.diseases.CowCategory;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class DisplayReproductionActivity extends ActionBarActivity {
 
+	
+	Button cowView;
+	Button sheepView;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_reproduction);
+		
+		cowView = (Button) findViewById(R.id.cowReproductionView);
+		cowView.setOnClickListener((android.view.View.OnClickListener) this);
+		sheepView = (Button) findViewById(R.id.sheepReproductionView);
+		sheepView.setOnClickListener((android.view.View.OnClickListener) this);
 	}
 
 	@Override
@@ -36,4 +51,29 @@ public class DisplayReproductionActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	public void onClick(View view) {
+		// TODO Auto-generated method stub
+		switch (view.getId()){
+		
+		case R.id.cowReproductionView:
+		
+			    	Intent cowReproIntent = new Intent(this, ReproductiveInfo.class);
+			    	startActivity(cowReproIntent);
+			    	Globals.sourceOption = "COWREPRODUCTION";
+			
+			break;
+	 
+		case R.id.sheepReproductionView:
+			
+	    			Intent sheepReproIntent = new Intent(this, ReproductiveInfo.class);
+	    			startActivity(sheepReproIntent);
+	    			Globals.sourceOption = "SHEEPREPRODUCTION";
+	
+	    	break;
+	    	
+		}
+		
+	}
+	
 }

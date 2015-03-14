@@ -103,51 +103,222 @@ public class DiseasesList extends ActionBarActivity {
         	adapter.notifyDataSetChanged();
         	listView.setAdapter(adapter);
 	    }
-	/*    
+	    
 	    if(Globals.sourceOption.equals("SHEEPRESPIRATORY"))
         {
-        	//TextView tv = (TextView) findViewById(R.id.tvSQLinfo);
-            DatabaseHelper info = new DatabaseHelper(this);
-            info.open();
-            String data = info.getSheepRespiratoryDiseases();
-            info.close();
-           // tv.setText(data);
+        	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getSheepRespiratoryDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
         	
         }
 	    
 	    if(Globals.sourceOption.equals("SHEEPSKIN"))
         {
-        	//TextView tv = (TextView) findViewById(R.id.tvSQLinfo);
-            DatabaseHelper info = new DatabaseHelper(this);
-            info.open();
-            String data = info.getSheepSkinDiseases();
-            info.close();
-           // tv.setText(data);
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getSheepSkinDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
         	
         }
 	    
 	    if(Globals.sourceOption.equals("SHEEPVIRUSES"))
         {
-        	//TextView tv = (TextView) findViewById(R.id.tvSQLinfo);
-            DatabaseHelper info = new DatabaseHelper(this);
-            info.open();
-            String data = info.getSheepVirDiseases();
-            info.close();
-           // tv.setText(data);
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getSheepVirDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
         	
         }
 	    
 	    if(Globals.sourceOption.equals("SHEEPREPRODUCTIVE"))
         {
-        	//TextView tv = (TextView) findViewById(R.id.tvSQLinfo);
-            DatabaseHelper info = new DatabaseHelper(this);
-            info.open();
-            String data = info.getSheepReproductiveDiseases();
-            info.close();
-           // tv.setText(data);
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getSheepReproductiveDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        }
+	    
+	    
+	    if(Globals.sourceOption.equals("CALFRESPIRATORY"))
+        {
+        	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getCalfRespiratoryDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
         	
         }
-    */
+	    
+	    if(Globals.sourceOption.equals("CALFSKIN"))
+        {
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getCalfSkinDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        	
+        }
+	    
+	    if(Globals.sourceOption.equals("CALFVIRUSES"))
+        {
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getCalfVirDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        	
+        }
+	    
+	    if(Globals.sourceOption.equals("CALFREPRODUCTIVE"))
+        {
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getCalfReproductiveDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        }
+	    
+	    
+	    if(Globals.sourceOption.equals("LAMBRESPIRATORY"))
+        {
+        	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getLambRespiratoryDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        	
+        }
+	    
+	    if(Globals.sourceOption.equals("LAMBSKIN"))
+        {
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getLambSkinDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        	
+        }
+	    
+	    if(Globals.sourceOption.equals("LAMBVIRUSES"))
+        {
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getLambVirDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        	
+        }
+	    
+	    if(Globals.sourceOption.equals("LAMBREPRODUCTIVE"))
+        {
+	    	DatabaseHelper info = new DatabaseHelper(this);
+	        info.open();
+	        Cursor data = info.getLambReproductiveDiseases();
+			
+			
+			String[] from = new String[] {databaseHelper.KEY_DISEASES_ID, databaseHelper.KEY_DISEASES_NAME};
+        	int[] to = new int[]{R.id.disease_id, R.id.disease_name};
+        	
+        	@SuppressWarnings("deprecation")
+			SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+        			DiseasesList.this, R.layout.activity_disease_item, (Cursor) data, from, to);
+        	adapter.notifyDataSetChanged();
+        	listView.setAdapter(adapter);
+        }
+    
 		
 		
 		

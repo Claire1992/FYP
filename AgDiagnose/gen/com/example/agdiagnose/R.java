@@ -1530,7 +1530,11 @@ containing a value of this type.
         public static final int sheep=0x7f020081;
     }
     public static final class id {
-        public static final int Logo=0x7f080060;
+        public static final int Logo=0x7f080066;
+        public static final int Symptom_tv=0x7f08005a;
+        public static final int Symtoms_tv=0x7f080059;
+        public static final int Treatment_tv=0x7f08005b;
+        public static final int Treatments_tv=0x7f08005c;
         public static final int action_bar=0x7f080031;
         public static final int action_bar_activity_content=0x7f08002a;
         public static final int action_bar_container=0x7f080030;
@@ -1542,7 +1546,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f08002b;
         public static final int action_menu_presenter=0x7f08002c;
         public static final int action_mode_close_button=0x7f080039;
-        public static final int action_settings=0x7f080061;
+        public static final int action_settings=0x7f080067;
         public static final int activity_chooser_view_content=0x7f08003a;
         public static final int adjust_height=0x7f080002;
         public static final int adjust_width=0x7f080001;
@@ -1552,11 +1556,12 @@ containing a value of this type.
         public static final int buyButton=0x7f08000c;
         public static final int buy_now=0x7f080011;
         public static final int buy_with_google=0x7f080010;
-        public static final int calfDiseasesView=0x7f08005e;
+        public static final int calfDiseasesView=0x7f080061;
         public static final int checkbox=0x7f080042;
         public static final int classic=0x7f080014;
         public static final int collapseActionView=0x7f080023;
-        public static final int cowDiseasesView=0x7f08005d;
+        public static final int cowDiseasesView=0x7f080060;
+        public static final int cowReproductionView=0x7f080064;
         public static final int default_activity_button=0x7f08003d;
         public static final int description_tv=0x7f080058;
         public static final int dialog=0x7f080024;
@@ -1564,7 +1569,7 @@ containing a value of this type.
         public static final int disease_id=0x7f080055;
         public static final int disease_name=0x7f080056;
         public static final int disease_tv=0x7f080057;
-        public static final int diseasesList=0x7f08005a;
+        public static final int diseasesList=0x7f08005d;
         public static final int donate_with_google=0x7f080013;
         public static final int dropdown=0x7f080025;
         public static final int edit_query=0x7f080045;
@@ -1580,10 +1585,10 @@ containing a value of this type.
         public static final int icon=0x7f08003f;
         public static final int ifRoom=0x7f080020;
         public static final int image=0x7f08003c;
-        public static final int lambDiseasesView=0x7f08005f;
+        public static final int lambDiseasesView=0x7f080062;
         public static final int listMode=0x7f080017;
         public static final int list_item=0x7f08003e;
-        public static final int map=0x7f08005b;
+        public static final int map=0x7f08005e;
         public static final int match_parent=0x7f08000e;
         public static final int middle=0x7f080027;
         public static final int monochrome=0x7f080016;
@@ -1609,7 +1614,8 @@ containing a value of this type.
         public static final int search_src_text=0x7f08004c;
         public static final int search_voice_btn=0x7f080050;
         public static final int selectionDetails=0x7f08000d;
-        public static final int sheepDiseasesView=0x7f08005c;
+        public static final int sheepDiseasesView=0x7f08005f;
+        public static final int sheepReproductionView=0x7f080065;
         public static final int shortcut=0x7f080043;
         public static final int showCustom=0x7f08001d;
         public static final int showHome=0x7f08001a;
@@ -1620,7 +1626,7 @@ containing a value of this type.
         public static final int submit_area=0x7f08004e;
         public static final int tabMode=0x7f080018;
         public static final int terrain=0x7f080005;
-        public static final int textView1=0x7f080059;
+        public static final int textView1=0x7f080063;
         public static final int title=0x7f080040;
         public static final int top_action_bar=0x7f080035;
         public static final int up=0x7f080036;
@@ -1691,8 +1697,9 @@ containing a value of this type.
         public static final int activity_display_reproduction=0x7f030020;
         public static final int activity_lamb_diseases=0x7f030021;
         public static final int activity_main=0x7f030022;
-        public static final int activity_sheep_diseases=0x7f030023;
-        public static final int support_simple_spinner_dropdown_item=0x7f030024;
+        public static final int activity_reproductive_info=0x7f030023;
+        public static final int activity_sheep_diseases=0x7f030024;
+        public static final int support_simple_spinner_dropdown_item=0x7f030025;
     }
     public static final class menu {
         public static final int calf_diseases=0x7f0d0000;
@@ -1705,7 +1712,8 @@ containing a value of this type.
         public static final int display_reproduction=0x7f0d0007;
         public static final int lamb_diseases=0x7f0d0008;
         public static final int main=0x7f0d0009;
-        public static final int sheep_diseases=0x7f0d000a;
+        public static final int reproductive_info=0x7f0d000a;
+        public static final int sheep_diseases=0x7f0d000b;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f050000;
@@ -1878,6 +1886,7 @@ containing a value of this type.
         public static final int title_activity_display_diseases=0x7f07003d;
         public static final int title_activity_display_reproduction=0x7f07003f;
         public static final int title_activity_lamb_diseases=0x7f070044;
+        public static final int title_activity_reproductive_info=0x7f070048;
         public static final int title_activity_sheep_diseases=0x7f070043;
         public static final int todo=0x7f070038;
         /**  Text on a placeholder buy button when Google Play services is not

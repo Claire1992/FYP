@@ -16,15 +16,54 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="37dp"
         android:layout_marginTop="20dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        />
 
     <TextView
         android:id="@+id/description_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="53dp"
+        android:layout_alignLeft="@+id/disease_tv"
+        android:layout_below="@+id/disease_tv"
+        android:layout_marginTop="19dp"
         />
+
+    <TextView
+        android:id="@+id/Symtoms_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Symptom_tv"
+        android:layout_alignTop="@+id/Symptom_tv"
+        android:layout_marginTop="51dp"
+         />
+
+    <TextView
+        android:id="@+id/Treatment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Symtoms_tv"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="92dp"
+        android:text="Treatment"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/Symptom_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/description_tv"
+        android:layout_below="@+id/description_tv"
+        android:layout_marginTop="103dp"
+        android:text="Symptoms"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/Treatments_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Treatment_tv"
+        android:layout_alignTop="@+id/Treatment_tv"
+        android:layout_marginTop="36dp"
+         />
 
 </RelativeLayout>

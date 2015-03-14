@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-   
+  /* 
         DatabaseHelper info = new DatabaseHelper(this);
         info.open();
         
@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
   
         
         info.close();
-        
+ */      
      
     }
 

@@ -6,7 +6,7 @@
     
     
     <Button
-        android:id="@+id/cowDiseasesView"
+        android:id="@+id/cowReproductionView"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_alignParentLeft="true"
@@ -16,13 +16,13 @@
         android:background="@drawable/cow" />
     
      <Button
-        android:id="@+id/sheepDiseasesView"
+        android:id="@+id/sheepReproductionView"
         android:layout_width="170dp"
         android:layout_height="150dp"
-        android:layout_alignBaseline="@+id/cowDiseasesView"
-        android:layout_alignBottom="@+id/cowDiseasesView"
+        android:layout_alignBaseline="@+id/cowReproductionView"
+        android:layout_alignBottom="@+id/cowReproductionView"
         android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/cowDiseasesView"
+        android:layout_toRightOf="@+id/cowReproductionView"
         android:background="@drawable/sheep" />
     
     

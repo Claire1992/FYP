@@ -28,6 +28,8 @@ public class DatabaseHelper {
 	public static final String KEY_DISEASES_ID = "_id";
 	public static final String KEY_DISEASES_NAME = "name_diseases";
 	public static final String KEY_DISEASES_DESCRIPTION = "description_diseases";
+	public static final String KEY_DISEASES_SYMPTOMS = "symptoms_diseases";
+	public static final String KEY_DISEASES_TREATMENT = "treatment_diseases";
 	public static final String KEY_DISEASES_IMAGE = "image_diseases";
 	//Animals_Diseases column names
 	public static final String KEY_Animals_Diseases_ID = "id_animals_diseases";
@@ -46,13 +48,20 @@ public class DatabaseHelper {
 	public static final String KEY_ANI = "id_ani";
 	public static final String KEY_CAT = "id_cat";
 	public static final String KEY_DIS = "id_dis";
-	//Tables
+	//Reproduction 
+	public static final String KEY_REPRODUCTION_ID = "id_reproduction";
+	public static final String KEY_REPRODUCTION_BREEDING ="breeding_reproduction";
+	public static final String KEY_REPRODUCTION_GESTATION ="gestation_reproduction";
+	public static final String KEY_REPRODUCTION_BIRTH ="birth_reproduction";
+	public static final String KEY_REPRODUCTION_ANIMAL = "animal_reproduction";
+	// Tables
 	public static final String TABLE_VET = "Vet";
 	private static final String TABLE_ANIMALS = "Animals";
 	private static final String TABLE_DISEASES = "Diseases";
 	private static final String TABLE_ANIMALS_DISEASES = "Animals_Diseases";
 	private static final String TABLE_CATEGORY = "Category";
 	private static final String TABLE_ANI_CAT_DIS = "Ani_cat_dis";
+	private static final String TABLE_REPRODUCTION = "Reproduction";
 	
 	private static final int DATABASE_VERSION =1;
 	private static final String DATABASE_NAME = "AgDiagnoseDatabase.db";
@@ -68,22 +77,27 @@ public class DatabaseHelper {
 		//Create Tables 
 		//Create Animals table
 		public static final String CREATE_TABLE_ANIMALS = "CREATE TABLE "+ TABLE_ANIMALS  
-				+"(" +KEY_ANIMALS_ID + " INTEGER PRIMARY KEY, "+
-				KEY_ANIMALS_TYPE + " VARCHAR(20)" + ")";
+				+"(" +KEY_ANIMALS_ID + " INTEGER PRIMARY KEY,"
+				+ KEY_ANIMALS_TYPE + " VARCHAR(20)" + ")";
 		
 		//Create Diseases table
 		public static final String CREATE_TABLE_DISEASES = "CREATE TABLE " + TABLE_DISEASES
-		            + "(" + KEY_DISEASES_ID + " INTEGER PRIMARY KEY," + KEY_DISEASES_NAME + " VARCHAR,"
-		            + KEY_DISEASES_DESCRIPTION + " VARCHAR," +KEY_DISEASES_IMAGE+  " VARCHAR" + ")";	
+		            + "(" + KEY_DISEASES_ID + " INTEGER PRIMARY KEY," 
+		            + KEY_DISEASES_NAME + " VARCHAR,"
+		            + KEY_DISEASES_DESCRIPTION + " VARCHAR," 
+		            + KEY_DISEASES_SYMPTOMS + " VARCHAR," 
+		            + KEY_DISEASES_TREATMENT + " VARCHAR," 
+		            + KEY_DISEASES_IMAGE+  " VARCHAR" + ")";	
 		
 		//Create Animals_Diseases table  
-		public static final String CREATE_TABLE_ANIMALS_DISEASES = "CREATE TABLE "
-	            + TABLE_ANIMALS_DISEASES + "(" + KEY_Animals_Diseases_ID + " INTEGER PRIMARY KEY,"
-	            + KEY_ANIMAL + " INTEGER," + KEY_DISEASE + " INTEGER" +")";
+		public static final String CREATE_TABLE_ANIMALS_DISEASES = "CREATE TABLE " + TABLE_ANIMALS_DISEASES 
+				+ "(" + KEY_Animals_Diseases_ID + " INTEGER PRIMARY KEY,"
+	            + KEY_ANIMAL + " INTEGER," 
+				+ KEY_DISEASE + " INTEGER" +")";
 		
 		
 		//Create Vet Table 
-		public static final String CREATE_TABLE_VET = "CREATE TABLE " + TABLE_VET  
+				public static final String CREATE_TABLE_VET = "CREATE TABLE " + TABLE_VET  
 					+ "(" + KEY_VET_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," 
 		            + TITLE + " VARCHAR,"
 	                + SNIPPET +  " VARCHAR," 
@@ -91,13 +105,23 @@ public class DatabaseHelper {
 		
 		//Create Category Table
 				public static final String CREATE_TABLE_CATEGORY = "CREATE TABLE "+ TABLE_CATEGORY  
-						+"(" +KEY_CATEGORY_ID + " INTEGER PRIMARY KEY, "+
-						KEY_CATEGORY_TYPE + " VARCHAR" + ")";
+						+"(" +KEY_CATEGORY_ID + " INTEGER PRIMARY KEY,"
+						+ KEY_CATEGORY_TYPE + " VARCHAR" + ")";
 				
-				//Create Ani_cat_dis Table
+		//Create Ani_cat_dis Table
 				public static final String CREATE_TABLE_ANI_CAT_DIS = "CREATE TABLE "
 			            + TABLE_ANI_CAT_DIS + "(" + KEY_ANI_CAT_DIS + " INTEGER PRIMARY KEY,"
-			            + KEY_ANI + " INTEGER," + KEY_CAT + " INTEGER," + KEY_DIS + " INTEGER" +")";
+			            + KEY_ANI + " INTEGER," 
+			            + KEY_CAT + " INTEGER," 
+			            + KEY_DIS + " INTEGER" +")";
+				
+				//Create Reproduction Table
+				public static final String CREATE_TABLE_REPRODUCTION = " CREATE TABLE "
+						+ TABLE_REPRODUCTION + "(" + KEY_REPRODUCTION_ID + " INTEGER PRIMARY KEY, "
+						+ KEY_REPRODUCTION_BREEDING + " VARCHAR, "
+						+ KEY_REPRODUCTION_GESTATION + " VARCHAR, "
+						+ KEY_REPRODUCTION_BIRTH + " VARCHAR, "
+						+ KEY_REPRODUCTION_ANIMAL + " INTEGER " +")";
 		
         
 		public DBHelper(Context context) {
@@ -113,6 +137,7 @@ public class DatabaseHelper {
 		     db.execSQL(CREATE_TABLE_VET);
 		     db.execSQL(CREATE_TABLE_CATEGORY);
 		     db.execSQL(CREATE_TABLE_ANI_CAT_DIS);
+		     db.execSQL(CREATE_TABLE_REPRODUCTION);
 		     
 		}
 
@@ -171,66 +196,88 @@ public class DatabaseHelper {
 		cv.put(KEY_DISEASES_ID, "1");
 		cv.put(KEY_DISEASES_NAME, "Bluetongue");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Respiratory disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "2");
 		cv.put(KEY_DISEASES_NAME, "Foot Rot");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Skin Eyes and Feet disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "3");
 		cv.put(KEY_DISEASES_NAME, "Calf Diphtheria");
 		cv.put(KEY_DISEASES_DESCRIPTION, "disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "4");
 		cv.put(KEY_DISEASES_NAME, "TB");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Respiratory disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "5");
 		cv.put(KEY_DISEASES_NAME, "BVD");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Respiratory disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "6");
 		cv.put(KEY_DISEASES_NAME, "Abortion");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Reproductive disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "7");
 		cv.put(KEY_DISEASES_NAME, "Cystic Ovaries");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Reproductive disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "8");
 		cv.put(KEY_DISEASES_NAME, "Foot and Mouth");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Skin Eyes Feet disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "9");
 		cv.put(KEY_DISEASES_NAME, "Ringworm");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Skin Eyes Feet disease");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "10");
 		cv.put(KEY_DISEASES_NAME, "Johnes");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Viruses and bacteria");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "11");
 		cv.put(KEY_DISEASES_NAME, "Liver Fluke");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Viruses and bacteria");
+		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
+		cv.put(KEY_DISEASES_TREATMENT, "treatment");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
@@ -386,7 +433,7 @@ public class DatabaseHelper {
 				"FROM Animals, Diseases, Category " +
 				"INNER JOIN Ani_Cat_Dis " + 
 				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
-				"WHERE type_animals = 'Cow' AND type_category = ?", new String[]{"Respiratory"});
+				"WHERE type_animals = 'Cow' AND type_category = ? ORDER BY name_diseases", new String[]{"Respiratory"});
  
 		if(c.moveToFirst()){
 			do{
@@ -402,6 +449,7 @@ public class DatabaseHelper {
 		
 }		
 	
+	/*************************** GET SKIN COWS ***********************************/
 	
 
 	public Cursor getCowSkinDiseases(){
@@ -409,7 +457,7 @@ public class DatabaseHelper {
 				"FROM Animals, Diseases, Category " +
 				"INNER JOIN Ani_Cat_Dis " + 
 				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
-				"WHERE type_animals = 'Cow' AND type_category = ?", new String[]{"Skin Eyes Feet"});
+				"WHERE type_animals = 'Cow' AND type_category = ? ORDER BY name_diseases", new String[]{"Skin Eyes Feet"});
 	//	String result = "";
 	//	int iName = c.getColumnIndex("name_diseases");
 	//	for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
@@ -430,12 +478,14 @@ public class DatabaseHelper {
 		
 }		
 	
+	/*************************** GET VIRUSES COWS ***********************************/
+	
 	public Cursor getCowVirDiseases(){
 		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
 				"FROM Animals, Diseases, Category " +
 				"INNER JOIN Ani_Cat_Dis " + 
 				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
-				"WHERE type_animals = 'Cow' AND type_category = ?", new String[]{"Viruses Bacteria"});
+				"WHERE type_animals = 'Cow' AND type_category = ? ORDER BY name_diseases", new String[]{"Viruses Bacteria"});
 		if(c.moveToFirst()){
 			do{
 			DiseaseObj disease = new DiseaseObj();
@@ -449,12 +499,14 @@ public class DatabaseHelper {
 	return c;
 	}
 	
+	/*************************** GET REPRODUCTIVE COWS ***********************************/
+	
 	public Cursor getCowReproductiveDiseases(){
 		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
 				"FROM Animals, Diseases, Category " +
 				"INNER JOIN Ani_Cat_Dis " + 
 				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
-				"WHERE type_animals = 'Cow' AND type_category = ?", new String[]{"Reproductive"});
+				"WHERE type_animals = 'Cow' AND type_category = ? ORDER BY name_diseases", new String[]{"Reproductive"});
 		if(c.moveToFirst()){
 			do{
 			DiseaseObj disease = new DiseaseObj();
@@ -493,6 +545,101 @@ public class DatabaseHelper {
 		
 	}
 	
+
+	/*************************** GET RESPIRTORY SHEEP ***********************************/
+	
+	public Cursor getSheepRespiratoryDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Sheep' AND type_category = ? ORDER BY name_diseases", new String[]{"Respiratory"});
+ 
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+		
+}		
+	
+	/*************************** GET SKIN SHEEP ***********************************/
+
+	public Cursor getSheepSkinDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Sheep' AND type_category = ? ORDER BY name_diseases", new String[]{"Skin Eyes Feet"});
+	//	String result = "";
+	//	int iName = c.getColumnIndex("name_diseases");
+	//	for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+	//		result = result + c.getString(iName) + " \n"; 
+			
+
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+		
+}		
+	
+	/*************************** GET VIRUSES SHEEP ***********************************/
+	
+	public Cursor getSheepVirDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Sheep' AND type_category = ? ORDER BY name_diseases", new String[]{"Viruses Bacteria"});
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+	}
+	
+	/*************************** GET REPRODUCTIVE SHEEP ***********************************/
+	
+	public Cursor getSheepReproductiveDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Sheep' AND type_category = ? ORDER BY name_diseases", new String[]{"Reproductive"});
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+	}
+	
+	
 	
 	/*************************** CALVES ***********************************/
 	
@@ -515,6 +662,101 @@ public class DatabaseHelper {
 			return result;
 		
 	}
+	
+	
+	/*************************** GET RESPIRTORY CALF ***********************************/
+	
+	public Cursor getCalfRespiratoryDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Calf' AND type_category = ? ORDER BY name_diseases", new String[]{"Respiratory"});
+ 
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+		
+}		
+	
+	/*************************** GET SKIN CALF ***********************************/
+
+	public Cursor getCalfSkinDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Calf' AND type_category = ? ORDER BY name_diseases", new String[]{"Skin Eyes Feet"});
+	//	String result = "";
+	//	int iName = c.getColumnIndex("name_diseases");
+	//	for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+	//		result = result + c.getString(iName) + " \n"; 
+			
+
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+		
+}		
+	
+	/*************************** GET VIRUSES CALF ***********************************/
+	
+	public Cursor getCalfVirDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Calf' AND type_category = ? ORDER BY name_diseases", new String[]{"Viruses Bacteria"});
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+	}
+	
+	/*************************** GET REPRODUCTIVE CALF ***********************************/
+	
+	public Cursor getCalfReproductiveDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Calf' AND type_category = ? ORDER BY name_diseases", new String[]{"Reproductive"});
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+	}
+	
 	
 	/*************************** LAMBS ***********************************/
 
@@ -539,6 +781,99 @@ public class DatabaseHelper {
 	}
 	
 	
+	/*************************** GET RESPIRTORY LAMB ***********************************/
+	
+	public Cursor getLambRespiratoryDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Lamb' AND type_category = ? ORDER BY name_diseases", new String[]{"Respiratory"});
+ 
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+		
+}		
+	
+	/*************************** GET SKIN LAMB ***********************************/
+
+	public Cursor getLambSkinDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Lamb' AND type_category = ? ORDER BY name_diseases", new String[]{"Skin Eyes Feet"});
+	//	String result = "";
+	//	int iName = c.getColumnIndex("name_diseases");
+	//	for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+	//		result = result + c.getString(iName) + " \n"; 
+			
+
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+		
+}		
+	
+	/*************************** GET VIRUSES LAMB ***********************************/
+	
+	public Cursor getLambVirDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Lamb' AND type_category = ? ORDER BY name_diseases", new String[]{"Viruses Bacteria"});
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+	}
+	
+	/*************************** GET REPRODUCTIVE LAMB ***********************************/
+	
+	public Cursor getLambReproductiveDiseases(){
+		Cursor c = ourDatabase.rawQuery("SELECT _id, name_diseases " +
+				"FROM Animals, Diseases, Category " +
+				"INNER JOIN Ani_Cat_Dis " + 
+				"ON Ani_Cat_Dis.id_ani = Animals.id_animals AND Ani_Cat_Dis.id_cat = Category.id_category AND Ani_Cat_Dis.id_dis = Diseases._id  " +
+				"WHERE type_animals = 'Lamb' AND type_category = ? ORDER BY name_diseases", new String[]{"Reproductive"});
+		if(c.moveToFirst()){
+			do{
+			DiseaseObj disease = new DiseaseObj();
+			disease.set_id(Integer.parseInt(c.getString(0)));
+			disease.setName_diseases(c.getString(1));
+			//disease.setDescription_diseases(c.getString(2));
+			//disease.setImage_diseases(c.getBlob(3));
+		}while(c.moveToNext());
+		
+		}
+	return c;
+	}
+	
 	
 	
 	
@@ -559,6 +894,46 @@ public class DatabaseHelper {
 		
 		
 	}
+	
+/***************************** Get disease symptoms  ********************************************/
+	
+	public String getSymptomsDisease(long diseaseID){
+		
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_DISEASES_SYMPTOMS+ " FROM " +TABLE_DISEASES+ " WHERE " + DatabaseHelper.KEY_DISEASES_ID + "  = " +diseaseID ,null);
+		String result = "";
+		int isymptoms = c.getColumnIndex(KEY_DISEASES_SYMPTOMS);
+				for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+					result = result + c.getString(isymptoms); 
+					
+				}
+				
+				return result;
+		
+		
+	}
+	
+	
+/***************************** Get disease treatment  ********************************************/
+	
+	public String getTreatmentDisease(long diseaseID){
+		
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_DISEASES_TREATMENT+ " FROM " +TABLE_DISEASES+ " WHERE " + DatabaseHelper.KEY_DISEASES_ID + "  = " +diseaseID ,null);
+		String result = "";
+		int itreatment = c.getColumnIndex(KEY_DISEASES_TREATMENT);
+				for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+					result = result + c.getString(itreatment); 
+					
+				}
+				
+				return result;
+		
+		
+	}
+	
+	
+	
+	
+	/**************************************REPRODUCTION
 	
 	
 	/************************** MARKERS ****************************************************************/

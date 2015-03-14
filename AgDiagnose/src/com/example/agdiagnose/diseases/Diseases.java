@@ -20,6 +20,8 @@ public class Diseases extends ActionBarActivity {
 	DatabaseHelper databaseHelper;
 	TextView diseaseNametv;
 	TextView diseaseDescriptiontv;
+	TextView Symtoms_tv;
+	TextView Treatments_tv;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public class Diseases extends ActionBarActivity {
 		
 		diseaseNametv= (TextView)findViewById(R.id.disease_tv);
 		diseaseDescriptiontv = (TextView)findViewById(R.id.description_tv);
+		Symtoms_tv = (TextView)findViewById(R.id.Symtoms_tv);
+		Treatments_tv =(TextView)findViewById(R.id.Treatments_tv); 
 		
 		
 		Intent i = getIntent();
@@ -43,10 +47,15 @@ public class Diseases extends ActionBarActivity {
 		String diseaseName = i.getStringExtra("name");
 	    disease_id = Long.parseLong(diseaseID);
 	//	databaseHelper.getDescriptionDisease(disease_id);
-	    String data = info.getDescriptionDisease(disease_id);
-		
+	    String description = info.getDescriptionDisease(disease_id);
+		String symptoms = info.getSymptomsDisease(disease_id);
+		String treatment = info.getTreatmentDisease(disease_id);
 		diseaseNametv.setText(diseaseName);
-		diseaseDescriptiontv.setText(data);
+		diseaseDescriptiontv.setText(description);
+		Symtoms_tv.setText(symptoms);
+		Treatments_tv.setText(treatment);
+		
+
 		
 		
 		
