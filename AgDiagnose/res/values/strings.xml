@@ -26,5 +26,9 @@
     <string name="title_activity_diseases_list">Diseases List</string>
     <string name="title_activity_diseases">Disease Info</string>
     <string name="title_activity_reproductive_info">Reproductive Info</string>
+    <string name="title_activity_breeding">Breeding</string>
+    <string name="title_activity_gestation">Gestation</string>
+    <string name="title_activity_birth">Birth</string>
+    <string name="title_activity_splash_screen">AgDagnose</string>
 
 </resources>

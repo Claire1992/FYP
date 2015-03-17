@@ -195,96 +195,139 @@ public class DatabaseHelper {
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_DISEASES_ID, "1");
 		cv.put(KEY_DISEASES_NAME, "Bluetongue");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Respiratory disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Bluetonge is an insect-borne viral disease. It is not contagious but is transferred by insect vectors.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "The keys symptoms include fever, excessive salivation and nasel discharge. In acute cases the lips and tongue become swollen. Lameness may also occur.");
+		cv.put(KEY_DISEASES_TREATMENT, "There is no efficient treatment. The bluetongue virus does not survive outside the insect vectors. Prevention includes quarantine and movement controls to prevent the spread of the disease.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "2");
 		cv.put(KEY_DISEASES_NAME, "Foot Rot");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Skin Eyes and Feet disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Foot Rot is a hoof infection which is extremely painful and contagious. It occurs in the area between the two toes of the animal and can spred to the whole herd. It is caused by bacteria (Fusobacterium necrophorum and Bacteroides melaninogenicus) in the soil.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Skin between the claws of the hoof begins to swell, skin between toes are very red and tender, lameness, foul odor from infected foot");
+		cv.put(KEY_DISEASES_TREATMENT, "The infected animal should be isolated from others. Clean and trim the foot. Penicillian is commonly used to treat foot rot. The infected animal should be kept dry until healing has occured. If there are no signs of recovery after 4 days, the bacteria could have infected teh other tissues if the foot.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "3");
 		cv.put(KEY_DISEASES_NAME, "Calf Diphtheria");
-		cv.put(KEY_DISEASES_DESCRIPTION, "disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Calf Diphtheria consists of two forms; acute oral infection which affects calves less than 3 months old, the other form which is seen in older calves affects the larynx. Both types are caused by the bacteria Fusobacterium necrophorum. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Oral form symptoms include; swollen cheek, fould smelling ulceration inside of mouth, high temperature, coughing, loss of appetite, depression, pneumonia. Laryngeal form may have the following symptoms; coughing, high temperature, loss of appetite, difficult breathing and chewing and pneumonia. ");
+		cv.put(KEY_DISEASES_TREATMENT, "Antibiotics and painkillers are an effective treatment. Isolate the infected animal from other animals. If animals are closely confined, the spread of this infectious disease can be prevented by thoroughly cleaning and disinfecting of all calf feeders.Young calves must be examined daily to identify early stages of the disease.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
-		
+	
 		cv.put(KEY_DISEASES_ID, "4");
-		cv.put(KEY_DISEASES_NAME, "TB");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Respiratory disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_NAME, "Bovine Tuberculosis (TB)");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Bovine Tuberculosis is caused by the bacterium Mycobacterium bovis. The bacteria can survive in a wide range of acids and alkalis. Bovine tuberculosis is a zoonotic disease and causes tuberculosis in human. The disease can be transmitted in raw milk but pasteurisation effectively prevents the spread via milk.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Bovine tuberculosis usually has a prolonged course, and symptoms take months or years to appear. The following symptoms include weakness, loss of appetite, weight loss, fuctuating fever, cough, diarrhoea and large lymph nodes");
+		cv.put(KEY_DISEASES_TREATMENT, "The method of detection is the tuberculin test where a small amounnt of antigen is injected into the skin. The control measure applied is test and slaughter. Treatment of infected animals is rarely attempted because of the high cost, lengthy time and the larger goal of eliminating the disease.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "5");
-		cv.put(KEY_DISEASES_NAME, "BVD");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Respiratory disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_NAME, "Bovine Viral Diarrhoea (BVD)");
+		cv.put(KEY_DISEASES_DESCRIPTION, "BVD is a cause of respiratory and reproductive issues within the herd.It is caused by the bovine viral diarrhea virus (BVDV). It is transmitted in numerous ways, through congenital infection of the fetus or after birth. Congenitally infected fetuses that survive in utero infection (i.e., the live-births) may be born as BVDV-infected calves. The BVDV infection in these calves will persist during the entire life of the calf, and they will shed BVDV continuously in the farm environment.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Symptoms of acute infection include fever, lethargy, loss of appetite, ocular dishcharge, nasal dischargem oral lesions, diarrhea and decreasing milk production. In calves, the most commonly recognised birth defect is cerebellar hypoplasia, symptoms include; ataxia, tremors, wide stance, stumbling, failure to nurse. ");
+		cv.put(KEY_DISEASES_TREATMENT, "The treatment is very limited. Infected  animals should be culled. However vaccines are available.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "6");
 		cv.put(KEY_DISEASES_NAME, "Abortion");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Reproductive disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Cows and sheep can suffer abnormalities during pregnancy. In all cases where the pregnancy terminates early and the foetus dies as a result are called abortions. There are numerous causes of abortion including drug induced, stress, high fever, nutritional, twin pregnancy and genetic. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Animal weak, depressed and early termination of pregnancy.");
+		cv.put(KEY_DISEASES_TREATMENT, "If the cause of abortion is infectious, antibiotics are prescribed for the animal. The infected animal should be isolated from other animals. More information; http://www.merckmanuals.com/vet/reproductive_system/abortion_in_large_animals/overview_of_abortion_in_large_animals.html ");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "7");
 		cv.put(KEY_DISEASES_NAME, "Cystic Ovaries");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Reproductive disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Cyctic ovarian disease usually occurs in the first two months after calving/lambing. Follicular cysts result from failure of ovulation and luteinization.  ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Abnormal estrous behavior pattern and failure to cycle");
+		cv.put(KEY_DISEASES_TREATMENT, "Since the cysts will not resolve on their own, early treatment is crucial. Treatment includes addressing the underlying factors for the onset of the condition. This may include correction of nutritional disorders or hormonal treatment. The causes of these cysts are still unknown which means there are no prevention measures undertaken.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
-		ourDatabase.insert(TABLE_DISEASES, null, cv);
+		ourDatabase.insert(TABLE_DISEASES, null, cv); 
 		
 		cv.put(KEY_DISEASES_ID, "8");
 		cv.put(KEY_DISEASES_NAME, "Foot and Mouth");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Skin Eyes Feet disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Foot and Mouth disease is a highly contagious viral disease and spreads very quicky. As a result of this it is a reportable disease. It is caused by seven different types of viruses which are only distinguishable in the laboratory.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Fever, blister in the mouth and feet, drop in milk production, weight loss, loss of appetite, frothing from the mouth and lameness");
+		cv.put(KEY_DISEASES_TREATMENT, "There is no available treatment as the animal is left to recover. It is one of the most difficult disease to control. FMD outbreaks are usually controlled by quarantines and movement restrictions, euthanasia of affected and in-contact animals, and cleansing and disinfection of affected premises, equipment and vehicles. Vaccinations areused to reduce the spread however vaccination with one serotype does not protect the aniaml against other serotypes. ");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "9");
-		cv.put(KEY_DISEASES_NAME, "Ringworm");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Skin Eyes Feet disease");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_NAME, "Mastitis");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Mastitis is a very serious infection and can be a cause of lamb/calf mortality from starvation. Mastitis is divided into three forms; acute, chronic and subclinical. It is caused by bacteria. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Symptoms include fever, loss of appetite, depression ");
+		cv.put(KEY_DISEASES_TREATMENT, "When mastitis is detected, it is important that the causal bacteria are determined in order to advise on the best treatment options. Antibiotics are injected after cow/sheep is fully milked out.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "10");
-		cv.put(KEY_DISEASES_NAME, "Johnes");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Viruses and bacteria");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_NAME, "Johne's Disease");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Johne’s disease is an infectious bacterial disease. It usually strikes during the first few weeks of life following the consummption of milk/food contaminated with bacteria. The disease is usually spread from an infected animal or infected material.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "It is slow to progress but many symptoms include; diarrhea, weight loss despite good appetite and bottle jaw.");
+		cv.put(KEY_DISEASES_TREATMENT, "There is no treatment for Johne's disease as the animal will continue to deteriorate. Prevention is the only way and this is doen by testing sick looking animals and isolating them from farm. Vaccinations are available also. ");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "11");
 		cv.put(KEY_DISEASES_NAME, "Liver Fluke");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Viruses and bacteria");
-		cv.put(KEY_DISEASES_SYMPTOMS, "symptoms");
-		cv.put(KEY_DISEASES_TREATMENT, "treatment");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Liver Fluke is caused by a parasite Fasciloa hepatica.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Symptoms include; reduced milk yields, reduced fertility, anaemia, diarrhoea and condemnation of livers. Youngstock tend to be more susceptible.");
+		cv.put(KEY_DISEASES_TREATMENT, "There are numerous products available for treating Liver Fluke. Flukicides are effective against immature and adult fluke. Prevention is done in the form of pasture rotation. If possible keep animals from grazing on wet land, such as river banks etc. An appropriate worming regime should also be introduced.  ");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		
+		cv.put(KEY_DISEASES_ID, "12");
+		cv.put(KEY_DISEASES_NAME, "Orf Virus");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Orf is a highly contagious viral disease. It forms as scaby lesions on the lips and nostrils of the animal. It can be transmitted to humans. It mainly affects young stock. The scabs of infected animals contain virus, can fall off, remain in the environment and serve as a source of infection to susceptible animals. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "At the early stages of the infection, sores appear as blisters and then develop as crusty scrabs. The sores are usually located on the lips, muzzle and in the mouth. Young stock may have difficulty nursing.");
+		cv.put(KEY_DISEASES_TREATMENT, "There are vaccination available but should only be considered for previously infected flocks. Prevention involves quarentine of new new animals until orf is ruled out and also try to avoid bringing animals to public events, eg fairs.");
+		cv.put(KEY_DISEASES_IMAGE, "image");
+		ourDatabase.insert(TABLE_DISEASES, null, cv);
+		
+		cv.put(KEY_DISEASES_ID, "13");
+		cv.put(KEY_DISEASES_NAME, "Joint Ill");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Joint ill is mainly a disease in young stock which usually occurs less than one week of age. It occurs as a result of infection entering via the umbilical cord at, or soon after, birth. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "If the infection stays in the navel, the primary symptom is a swollen, painful navel that does not dry up, high temperature and reduced appetite. If it spreads from the navel, bacteria spreads via the bloodstream and settle in other parts of the body. Joints are usually hit by the joints which leads to stiff painful joints. Loss of appetite and depression are often witnessed.");
+		cv.put(KEY_DISEASES_TREATMENT, "Early treatment is necessary to stop the spread of infection. Infected animals should be isolated and treated with antibiotics and painkillers. Prevention involves having a clean environment in which the animals lay. Applying iodine to the navel can significantly reduce the risk of bacteria entering via the navel.");
+		cv.put(KEY_DISEASES_IMAGE, "image");
+		ourDatabase.insert(TABLE_DISEASES, null, cv);
+		
+		cv.put(KEY_DISEASES_ID, "14");
+		cv.put(KEY_DISEASES_NAME, "Twin Lamb Disease/Pregnancy Toxaemia");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Twin Lamb Disease is a metabolic disorder where the body's energy requirements are not being met, resulting from poor nutritional diet.  Ewes carrying twins are more often affected, but ewes carrying single lambs can also get the disease. Stressful events like worms, skin and  feet problems, transport can trigger Pregnancy Toxaemia. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Separation from flock is a major sign. The sheep does not run away when approached.");
+		cv.put(KEY_DISEASES_TREATMENT, "Early treatment is vital. There are many nutritional supplements available. The ewe should be eating well, if not, it is unlikely she will respond to treatment.");
+		cv.put(KEY_DISEASES_IMAGE, "Orf Virus");
+		ourDatabase.insert(TABLE_DISEASES, null, cv);
+		
+		cv.put(KEY_DISEASES_ID, "15");
+		cv.put(KEY_DISEASES_NAME, "Calf Pneumonia");
+		cv.put(KEY_DISEASES_DESCRIPTION, "This is a major problem in dairy and beef herds and is common in calves between one to five months. Infectious agents involved include Mannheimia haemolytica, Haemophilus somnus, Infectious Bovine Rhinotracheitis (IBR), bovine Respiratory Syncytial Virus (RSV) and Parainfluenza III Virus (PI3), along with numerous others. Low environmental temperatures or draughts may also trigger this.  ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Symptoms include; depressed, high temperature, raised breathing, nasel discharge, coughing and reduced food intake.");
+		cv.put(KEY_DISEASES_TREATMENT, "Treatment includes antibiotics or anti-inflammatories. It is difficult to control since they are placed in pens. Improved ventilation and good nursing can reduced the onset of pneumonia. Usually if ammonia is smelled it is a sign of poor ventilation. Vaccines are available to reduce risk of infection, however they must be used alongside an effective management programme.");
+		cv.put(KEY_DISEASES_IMAGE, "image");
+		ourDatabase.insert(TABLE_DISEASES, null, cv);
+		
+	/*	
+		cv.put(KEY_DISEASES_ID, "15");
+		cv.put(KEY_DISEASES_NAME, "Joint Ill");
+		cv.put(KEY_DISEASES_DESCRIPTION, "12");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Orf Virus");
+		cv.put(KEY_DISEASES_TREATMENT, "12");
+		cv.put(KEY_DISEASES_IMAGE, "Orf Virus");
+		ourDatabase.insert(TABLE_DISEASES, null, cv);
+		
+	*/                    	
+		
 	}																																															
 
-	/***************************** INSERT ANIMALS **************************************/
+	/***************************** INSERT ANIMALS  Diseases**************************************/
 	
 	public void insertAnimalsDiseases(){
 		ContentValues cv = new ContentValues();
@@ -367,7 +410,7 @@ public class DatabaseHelper {
 		
 		cv.put(KEY_ANI_CAT_DIS, "5");
 		cv.put(KEY_ANI, "1");
-		cv.put(KEY_CAT, "2");
+		cv.put(KEY_CAT, "4");
 		cv.put(KEY_DIS, "9");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
@@ -400,7 +443,37 @@ public class DatabaseHelper {
 		cv.put(KEY_CAT, "4");
 		cv.put(KEY_DIS, "7");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "11");
+		cv.put(KEY_ANI, "1");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "2");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 	}
+	
+	
+	/*********************************INSERT REPRODUCTION***************************************/
+	
+	public void insertReproduction(){
+		ContentValues cv = new ContentValues();
+		cv.put(KEY_REPRODUCTION_ID, "1");
+		cv.put(KEY_REPRODUCTION_BREEDING, "Cow Breeding");
+		cv.put(KEY_REPRODUCTION_GESTATION, "Cow Gestation");
+		cv.put(KEY_REPRODUCTION_BIRTH, "Cow Birth");
+		cv.put(KEY_REPRODUCTION_ANIMAL, "1");
+		ourDatabase.insert(TABLE_REPRODUCTION, null, cv);
+	
+		cv.put(KEY_REPRODUCTION_ID, "2");
+		cv.put(KEY_REPRODUCTION_BREEDING, "Sheep Breeding");
+		cv.put(KEY_REPRODUCTION_GESTATION, "Sheep Gestation");
+		cv.put(KEY_REPRODUCTION_BIRTH, "Sheep Birth");
+		cv.put(KEY_REPRODUCTION_ANIMAL, "2");
+		ourDatabase.insert(TABLE_REPRODUCTION, null, cv);
+		
+		
+	}
+	
+	
 
 	/*************************** GET ANIMALS ***********************************************************/
 	
@@ -933,7 +1006,105 @@ public class DatabaseHelper {
 	
 	
 	
-	/**************************************REPRODUCTION
+	/**************************************REPRODUCTION***********************************/
+	/***********************************COW*******************************************/
+	
+	public String getCowBreeding(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_BREEDING +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"1"});
+		 String result = "";
+			
+			int iBreeding = c.getColumnIndex("breeding_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBreeding) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	public String getCowGestation(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_GESTATION +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"1"});
+		 String result = "";
+			
+			int iGestation = c.getColumnIndex("gestation_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iGestation) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	public String getCowBirth(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_BIRTH +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"1"});
+		 String result = "";
+			
+			int iBirth = c.getColumnIndex("birth_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBirth) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	
+	/******************************SHEEP***************************************************/
+	
+	public String getSheepBreeding(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_BREEDING +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		 String result = "";
+			
+			int iBreeding = c.getColumnIndex("breeding_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBreeding) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	public String getSheepGestation(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_GESTATION +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		 String result = "";
+			
+			int iGestation = c.getColumnIndex("gestation_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iGestation) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	public String getSheepBirth(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_BIRTH +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		 String result = "";
+			
+			int iBirth = c.getColumnIndex("birth_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBirth) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	
+	
+	
 	
 	
 	/************************** MARKERS ****************************************************************/

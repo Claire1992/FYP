@@ -20,7 +20,7 @@ public class Diseases extends ActionBarActivity {
 	DatabaseHelper databaseHelper;
 	TextView diseaseNametv;
 	TextView diseaseDescriptiontv;
-	TextView Symtoms_tv;
+	TextView Symptoms_tv;
 	TextView Treatments_tv;
 	
 	@Override
@@ -38,7 +38,7 @@ public class Diseases extends ActionBarActivity {
 		
 		diseaseNametv= (TextView)findViewById(R.id.disease_tv);
 		diseaseDescriptiontv = (TextView)findViewById(R.id.description_tv);
-		Symtoms_tv = (TextView)findViewById(R.id.Symtoms_tv);
+		Symptoms_tv = (TextView)findViewById(R.id.Symptoms_tv);
 		Treatments_tv =(TextView)findViewById(R.id.Treatments_tv); 
 		
 		
@@ -52,7 +52,7 @@ public class Diseases extends ActionBarActivity {
 		String treatment = info.getTreatmentDisease(disease_id);
 		diseaseNametv.setText(diseaseName);
 		diseaseDescriptiontv.setText(description);
-		Symtoms_tv.setText(symptoms);
+		Symptoms_tv.setText(symptoms);
 		Treatments_tv.setText(treatment);
 		
 

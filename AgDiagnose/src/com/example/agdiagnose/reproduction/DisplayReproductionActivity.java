@@ -14,9 +14,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class DisplayReproductionActivity extends ActionBarActivity {
+public class DisplayReproductionActivity extends ActionBarActivity implements OnClickListener {
 
 	
 	Button cowView;

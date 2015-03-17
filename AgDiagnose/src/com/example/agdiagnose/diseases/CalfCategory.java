@@ -15,8 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
-public class CalfCategory extends ActionBarActivity {
+public class CalfCategory extends ActionBarActivity implements OnClickListener{
 	
 	Button respView;
 	Button skinView;
