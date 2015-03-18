@@ -50,8 +50,11 @@ public class DatabaseHelper {
 	public static final String KEY_DIS = "id_dis";
 	//Reproduction 
 	public static final String KEY_REPRODUCTION_ID = "id_reproduction";
+	public static final String KEY_INTRO_REPRODUCTION_BREEDING ="breeding_intro_reproduction";
 	public static final String KEY_REPRODUCTION_BREEDING ="breeding_reproduction";
+	public static final String KEY_INTRO_REPRODUCTION_GESTATION ="gestation_intro_reproduction";
 	public static final String KEY_REPRODUCTION_GESTATION ="gestation_reproduction";
+	public static final String KEY_INTRO_REPRODUCTION_BIRTH ="birth_intro_reproduction";
 	public static final String KEY_REPRODUCTION_BIRTH ="birth_reproduction";
 	public static final String KEY_REPRODUCTION_ANIMAL = "animal_reproduction";
 	// Tables
@@ -118,8 +121,11 @@ public class DatabaseHelper {
 				//Create Reproduction Table
 				public static final String CREATE_TABLE_REPRODUCTION = " CREATE TABLE "
 						+ TABLE_REPRODUCTION + "(" + KEY_REPRODUCTION_ID + " INTEGER PRIMARY KEY, "
+						+ KEY_INTRO_REPRODUCTION_BREEDING + " VARCHAR, "
 						+ KEY_REPRODUCTION_BREEDING + " VARCHAR, "
+						+ KEY_INTRO_REPRODUCTION_GESTATION + " VARCHAR, "
 						+ KEY_REPRODUCTION_GESTATION + " VARCHAR, "
+						+ KEY_INTRO_REPRODUCTION_BIRTH + " VARCHAR, "
 						+ KEY_REPRODUCTION_BIRTH + " VARCHAR, "
 						+ KEY_REPRODUCTION_ANIMAL + " INTEGER " +")";
 		
@@ -328,7 +334,7 @@ public class DatabaseHelper {
 	}																																															
 
 	/***************************** INSERT ANIMALS  Diseases**************************************/
-	
+	/*
 	public void insertAnimalsDiseases(){
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_Animals_Diseases_ID, "1");
@@ -358,7 +364,7 @@ public class DatabaseHelper {
 		
 		
 	}
-	
+	*/
 	/*************************** INSERT CATEGORIES ***********************************************************/
 	public void insertCategory(){
 		ContentValues cv = new ContentValues();
@@ -392,63 +398,220 @@ public class DatabaseHelper {
 		
 		cv.put(KEY_ANI_CAT_DIS, "2");
 		cv.put(KEY_ANI, "1");
-		cv.put(KEY_CAT, "1");
-		cv.put(KEY_DIS, "4");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "1");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
 		cv.put(KEY_ANI_CAT_DIS, "3");
-		cv.put(KEY_ANI, "1");
+		cv.put(KEY_ANI, "2");
 		cv.put(KEY_CAT, "1");
-		cv.put(KEY_DIS, "5");
+		cv.put(KEY_DIS, "1");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
-
+		
 		cv.put(KEY_ANI_CAT_DIS, "4");
-		cv.put(KEY_ANI, "1");
+		cv.put(KEY_ANI, "2");
 		cv.put(KEY_CAT, "2");
-		cv.put(KEY_DIS, "8");
+		cv.put(KEY_DIS, "1");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
 		cv.put(KEY_ANI_CAT_DIS, "5");
 		cv.put(KEY_ANI, "1");
-		cv.put(KEY_CAT, "4");
-		cv.put(KEY_DIS, "9");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "2");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
 		cv.put(KEY_ANI_CAT_DIS, "6");
-		cv.put(KEY_ANI, "1");
-		cv.put(KEY_CAT, "3");
-		cv.put(KEY_DIS, "10");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "2");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
 		cv.put(KEY_ANI_CAT_DIS, "7");
-		cv.put(KEY_ANI, "1");
-		cv.put(KEY_CAT, "3");
-		cv.put(KEY_DIS, "11");
+		cv.put(KEY_ANI, "3");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "3");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
 		cv.put(KEY_ANI_CAT_DIS, "8");
+		cv.put(KEY_ANI, "3");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "3");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "9");
+		cv.put(KEY_ANI, "1");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "4");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "10");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "4");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "11");
+		cv.put(KEY_ANI, "1");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "12");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "13");
+		cv.put(KEY_ANI, "3");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "14");
+		cv.put(KEY_ANI, "4");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "15");
 		cv.put(KEY_ANI, "1");
 		cv.put(KEY_CAT, "4");
 		cv.put(KEY_DIS, "5");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
-		cv.put(KEY_ANI_CAT_DIS, "9");
+		cv.put(KEY_ANI_CAT_DIS, "16");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "17");
+		cv.put(KEY_ANI, "3");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "18");
+		cv.put(KEY_ANI, "4");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "5");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "19");
 		cv.put(KEY_ANI, "1");
 		cv.put(KEY_CAT, "4");
 		cv.put(KEY_DIS, "6");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
-		cv.put(KEY_ANI_CAT_DIS, "10");
+		cv.put(KEY_ANI_CAT_DIS, "20");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "6");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "21");
 		cv.put(KEY_ANI, "1");
 		cv.put(KEY_CAT, "4");
 		cv.put(KEY_DIS, "7");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
 		
-		cv.put(KEY_ANI_CAT_DIS, "11");
+		cv.put(KEY_ANI_CAT_DIS, "22");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "7");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "23");
 		cv.put(KEY_ANI, "1");
 		cv.put(KEY_CAT, "2");
-		cv.put(KEY_DIS, "2");
+		cv.put(KEY_DIS, "8");
 		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "24");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "8");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "25");
+		cv.put(KEY_ANI, "1");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "9");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "26");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "9");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "27");
+		cv.put(KEY_ANI, "1");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "10");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "28");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "10");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "29");
+		cv.put(KEY_ANI, "1");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "11");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "30");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "11");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "31");
+		cv.put(KEY_ANI, "4");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "12");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "32");
+		cv.put(KEY_ANI, "3");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "13");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "33");
+		cv.put(KEY_ANI, "4");
+		cv.put(KEY_CAT, "3");
+		cv.put(KEY_DIS, "13");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "34");
+		cv.put(KEY_ANI, "2");
+		cv.put(KEY_CAT, "4");
+		cv.put(KEY_DIS, "14");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		cv.put(KEY_ANI_CAT_DIS, "35");
+		cv.put(KEY_ANI, "3");
+		cv.put(KEY_CAT, "1");
+		cv.put(KEY_DIS, "15");
+
+
+		cv.put(KEY_ANI_CAT_DIS, "36");
+		cv.put(KEY_ANI, "4");
+		cv.put(KEY_CAT, "2");
+		cv.put(KEY_DIS, "13");
+		ourDatabase.insert(TABLE_ANI_CAT_DIS, null, cv);
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 	
@@ -457,16 +620,22 @@ public class DatabaseHelper {
 	public void insertReproduction(){
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_REPRODUCTION_ID, "1");
-		cv.put(KEY_REPRODUCTION_BREEDING, "Cow Breeding");
-		cv.put(KEY_REPRODUCTION_GESTATION, "Cow Gestation");
-		cv.put(KEY_REPRODUCTION_BIRTH, "Cow Birth");
+		cv.put(KEY_INTRO_REPRODUCTION_BREEDING, "Heifers are female bovines who have not had a calf. They become a cow after their second calf. Breeding in heifers; depending on the breed most heifers will start to show signs of heat when they are between 9 and 22 months of age. It is best to wait until the heifer is 15 months of age before breeding. This alows more time for growth of the pelvic area and gain nutrition for gestation. Heifers that are bred too early usually end  up having a C-section. The heifer must also be at least 60% to 65% of the average mature weight of the cowherd before she can be bred. Choose a bull that results in easy birth for the heifers. A heifer can only be successfully bred during her heat periods. It is best to leave bull in with heifers for 60 to 80 days.  ");
+		cv.put(KEY_REPRODUCTION_BREEDING, "The optimum time to breed a cow is 45 to 60 days after she had a calf. In order to get her to calve on the same date as the previous years, allow for 80 to 90 days of rest before getting her bred again. If she is in poor condition it will take her longer to come back to normal heat again. You do not need a calving ease bull with cow, however do be cautious in what breed of bull you do select. Remember to choose a bull that complements and improves your herd. ");
+		cv.put(KEY_INTRO_REPRODUCTION_GESTATION, "The gestation length in cattle lasts between 279 to 290 days. This depends on breed, age and body condition. It is also controlled by genetics. ");
+		cv.put(KEY_REPRODUCTION_GESTATION, "Heifers who are pregnant for the first time will usually have a longer gestation period. Typically small cows have a shorter gestation period than big cows. Thin cows also usually have short gestation length than fat cows. Imbalances in minerals, particularly calcium, magnesium, potassium, iodine and selenium, can occur withhome-grown forage-only diets. Provide supplementary minerals and vitamins during the last two months of pregnancy.  ");
+		cv.put(KEY_INTRO_REPRODUCTION_BIRTH, "Calving facilities should be clean and have a supply of fresh water available. Inspect the animal twice daily and transport them into calving unit when you feel there is an onset of calving, i.e the cow will have a swollen udder and may be releasing colostrum.  ");
+		cv.put(KEY_REPRODUCTION_BIRTH, "If after 6 hours the waterbag is not appearing, examine the cow with gloved hands and also if the calf hasn't been born 2 hours after the relase of the waterbags. Make sure you have good calving equipment i.e. non-slip calving jack, arm length gloves etc. Ensure the cow is standing before attempting to correct a wrongly positioned calf. Remember to only pull cal when the cow forces and relax when the cow relaxes. ");
 		cv.put(KEY_REPRODUCTION_ANIMAL, "1");
 		ourDatabase.insert(TABLE_REPRODUCTION, null, cv);
 	
 		cv.put(KEY_REPRODUCTION_ID, "2");
-		cv.put(KEY_REPRODUCTION_BREEDING, "Sheep Breeding");
-		cv.put(KEY_REPRODUCTION_GESTATION, "Sheep Gestation");
-		cv.put(KEY_REPRODUCTION_BIRTH, "Sheep Birth");
+		cv.put(KEY_INTRO_REPRODUCTION_BREEDING, "Rams need to be in good condition before mating as they eat very little during mating and subsequently lose weight. The production of sperm in the ram can take up to 6 to 7 weeks. The farmer should aim to have routine health treatments done on the ewes before prior to mating. ");
+		cv.put(KEY_REPRODUCTION_BREEDING, "There is a hugh increase in breeding ewe lambs ad they have the potential to increase the output of the flock. Ewe lambs should only breed when they have achieved 60% of their mature weight, having a weight of 45 to 50kg. Do not over feed ewe as this can have a negative impact on embryo survival. Ewe lambs should be put into a separate flock after mating. Limit the mating period to three or four weeks and scan the ewe lambs and feed according to litter size. If ewe lambs do not achieve the desired mature weight at mating the following year, their performance will be comprimised, therefore they need to graze on the best quality grass from lambing until they are ready to be mated again. The use of a teaser ram 14 days prior to the start of mating can help to compact the lambing period.   ");
+		cv.put(KEY_INTRO_REPRODUCTION_GESTATION, "The average gestation length in a sheep is about 142 to 152 days. However it does depend on the breed of the sheep. Ewes carrying multiple lambs tend to have shorter gestations. Male lambs and heavy birth weight lambs are usually carried longer than female lambs. ");
+		cv.put(KEY_REPRODUCTION_GESTATION, "The first 30 days of gestation are critical as it has the highest rate of embryonic mortality. Shearing, vaccinating i.e.anything stressful should not be carried out during the first 30 of gestation. Ultrasonic pregnancy scanning can be performed on ewes from 35 to 65 days after breeding. Nutrition levels for sheep should be raised for the first 15 weeks. The majority of the growth of the foetus takes place during the last 4 to 6 weeks of gestation. Ewes on a poor nutritional dies are prone to pregnancy toxemia. Nutrition in late-pregnancy affects the size and vigor of lambs and the milk producing ability of the ewe.  ");
+		cv.put(KEY_INTRO_REPRODUCTION_BIRTH, "Lambing consists of three stages. In the first stage, the cervix dialates. This stage could last from 3 to 4 hours and in the latter part a clear white discharge will appear. This indicates that lambing has begun. ");
+		cv.put(KEY_REPRODUCTION_BIRTH, "As labour progresses, the ewe spends the maority of the time lying on her side. After a while a large waterbag appears, it then breaks and releases the water. At this stage the nose and front feet of the lamb can be felt. The lamb is then expelled. If a ewe is having more than one lamb, the same sequence still applies. The last stage involves the expulsion of the placenta. It is usually released 30 to 60 minutes after the delivery of the last lamb. If the placenta is not expelled after 24 hours, there may be a problem. The ewe's instincts tell her to eat the placenta to hide evidence of lambing from predators. The placenta should be removed to stop the spread disease.  ");
 		cv.put(KEY_REPRODUCTION_ANIMAL, "2");
 		ourDatabase.insert(TABLE_REPRODUCTION, null, cv);
 		
@@ -1007,7 +1176,29 @@ public class DatabaseHelper {
 	
 	
 	/**************************************REPRODUCTION***********************************/
+	
+	
+	
+	
+	
+	
 	/***********************************COW*******************************************/
+	
+	public String getCowIntroBreeding(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_INTRO_REPRODUCTION_BREEDING +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"1"});
+		 String result = "";
+			
+			int iBreeding = c.getColumnIndex("breeding_intro_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBreeding) + " \n"; 
+			}
+			return result;
+		
+		
+	}
 	
 	public String getCowBreeding(){
 		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_BREEDING +
@@ -1024,6 +1215,21 @@ public class DatabaseHelper {
 		
 	}
 	
+	public String getCowIntroGestation(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_INTRO_REPRODUCTION_GESTATION +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"1"});
+		 String result = "";
+			
+			int iGestation = c.getColumnIndex("gestation_intro_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iGestation) + " \n"; 
+			}
+			return result;
+		
+	}
+	
 	public String getCowGestation(){
 		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_GESTATION +
 		 		" FROM " + TABLE_REPRODUCTION +
@@ -1034,6 +1240,21 @@ public class DatabaseHelper {
 			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
 				result = result + c.getString(iGestation) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	public String getCowIntroBirth(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_INTRO_REPRODUCTION_BIRTH +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"1"});
+		 String result = "";
+			
+			int iBirth = c.getColumnIndex("birth_intro_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBirth) + " \n"; 
 			}
 			return result;
 		
@@ -1057,6 +1278,21 @@ public class DatabaseHelper {
 	
 	/******************************SHEEP***************************************************/
 	
+	public String getSheepIntroBreeding(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_INTRO_REPRODUCTION_BREEDING +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		 String result = "";
+			
+			int iBreeding = c.getColumnIndex("breeding_intro_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBreeding) + " \n"; 
+			}
+			return result;
+		
+	}
+	
 	public String getSheepBreeding(){
 		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_BREEDING +
 		 		" FROM " + TABLE_REPRODUCTION +
@@ -1072,6 +1308,22 @@ public class DatabaseHelper {
 		
 	}
 	
+	public String getSheepIntroGestation(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_INTRO_REPRODUCTION_GESTATION +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		 String result = "";
+			
+			int iGestation = c.getColumnIndex("gestation_intro_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iGestation) + " \n"; 
+			}
+			return result;
+		
+	}
+
+	
 	public String getSheepGestation(){
 		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_GESTATION +
 		 		" FROM " + TABLE_REPRODUCTION +
@@ -1082,6 +1334,21 @@ public class DatabaseHelper {
 			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
 				result = result + c.getString(iGestation) + " \n"; 
+			}
+			return result;
+		
+	}
+	
+	public String getSheepIntroBirth(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_INTRO_REPRODUCTION_BIRTH +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		 String result = "";
+			
+			int iBirth = c.getColumnIndex("birth_intro_reproduction");
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+				result = result + c.getString(iBirth) + " \n"; 
 			}
 			return result;
 		

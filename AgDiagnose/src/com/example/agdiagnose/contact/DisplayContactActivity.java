@@ -45,7 +45,7 @@ public class DisplayContactActivity extends FragmentActivity implements Location
 		 info.addMarker(new MyMarkerObj("Glenina Veterinary Clinic", "091 752014", "53.279293 -9.020491"));
 		 info.addMarker(new MyMarkerObj("Oran Veterinary Clinic", "091 788270", "53.277718 -8.923924"));
 
-	*/	    
+	*/    
 		 
 		 List<MyMarkerObj> m = info.getMyMarkers();
 		 for(int i = 0; i< m.size(); i++){
