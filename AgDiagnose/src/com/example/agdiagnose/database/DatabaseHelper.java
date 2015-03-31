@@ -2,6 +2,7 @@ package com.example.agdiagnose.database;
 
 
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Bitmap.CompressFormat;
 import android.util.Log;
+import com.example.agdiagnose.database.ReproductionObj;
 import com.example.agdiagnose.*;
 
 
@@ -57,6 +62,7 @@ public class DatabaseHelper {
 	public static final String KEY_INTRO_REPRODUCTION_BIRTH ="birth_intro_reproduction";
 	public static final String KEY_REPRODUCTION_BIRTH ="birth_reproduction";
 	public static final String KEY_REPRODUCTION_ANIMAL = "animal_reproduction";
+	public static final String KEY_REPRODUCTION_IMAGE = "image_reproduction";
 	// Tables
 	public static final String TABLE_VET = "Vet";
 	private static final String TABLE_ANIMALS = "Animals";
@@ -127,6 +133,7 @@ public class DatabaseHelper {
 						+ KEY_REPRODUCTION_GESTATION + " VARCHAR, "
 						+ KEY_INTRO_REPRODUCTION_BIRTH + " VARCHAR, "
 						+ KEY_REPRODUCTION_BIRTH + " VARCHAR, "
+						+ KEY_REPRODUCTION_IMAGE + " BLOB, "
 						+ KEY_REPRODUCTION_ANIMAL + " INTEGER " +")";
 		
         
@@ -626,6 +633,7 @@ public class DatabaseHelper {
 		cv.put(KEY_REPRODUCTION_GESTATION, "Heifers who are pregnant for the first time will usually have a longer gestation period. Typically small cows have a shorter gestation period than big cows. Thin cows also usually have short gestation length than fat cows. Imbalances in minerals, particularly calcium, magnesium, potassium, iodine and selenium, can occur withhome-grown forage-only diets. Provide supplementary minerals and vitamins during the last two months of pregnancy.  ");
 		cv.put(KEY_INTRO_REPRODUCTION_BIRTH, "Calving facilities should be clean and have a supply of fresh water available. Inspect the animal twice daily and transport them into calving unit when you feel there is an onset of calving, i.e the cow will have a swollen udder and may be releasing colostrum.  ");
 		cv.put(KEY_REPRODUCTION_BIRTH, "If after 6 hours the waterbag is not appearing, examine the cow with gloved hands and also if the calf hasn't been born 2 hours after the relase of the waterbags. Make sure you have good calving equipment i.e. non-slip calving jack, arm length gloves etc. Ensure the cow is standing before attempting to correct a wrongly positioned calf. Remember to only pull cal when the cow forces and relax when the cow relaxes. ");
+		
 		cv.put(KEY_REPRODUCTION_ANIMAL, "1");
 		ourDatabase.insert(TABLE_REPRODUCTION, null, cv);
 	
@@ -636,6 +644,7 @@ public class DatabaseHelper {
 		cv.put(KEY_REPRODUCTION_GESTATION, "The first 30 days of gestation are critical as it has the highest rate of embryonic mortality. Shearing, vaccinating i.e.anything stressful should not be carried out during the first 30 of gestation. Ultrasonic pregnancy scanning can be performed on ewes from 35 to 65 days after breeding. Nutrition levels for sheep should be raised for the first 15 weeks. The majority of the growth of the foetus takes place during the last 4 to 6 weeks of gestation. Ewes on a poor nutritional dies are prone to pregnancy toxemia. Nutrition in late-pregnancy affects the size and vigor of lambs and the milk producing ability of the ewe.  ");
 		cv.put(KEY_INTRO_REPRODUCTION_BIRTH, "Lambing consists of three stages. In the first stage, the cervix dialates. This stage could last from 3 to 4 hours and in the latter part a clear white discharge will appear. This indicates that lambing has begun. ");
 		cv.put(KEY_REPRODUCTION_BIRTH, "As labour progresses, the ewe spends the maority of the time lying on her side. After a while a large waterbag appears, it then breaks and releases the water. At this stage the nose and front feet of the lamb can be felt. The lamb is then expelled. If a ewe is having more than one lamb, the same sequence still applies. The last stage involves the expulsion of the placenta. It is usually released 30 to 60 minutes after the delivery of the last lamb. If the placenta is not expelled after 24 hours, there may be a problem. The ewe's instincts tell her to eat the placenta to hide evidence of lambing from predators. The placenta should be removed to stop the spread disease.  ");
+		cv.put(KEY_REPRODUCTION_IMAGE, "/AgDiagnose/res/drawable-hdpi/sheep.jpg");
 		cv.put(KEY_REPRODUCTION_ANIMAL, "2");
 		ourDatabase.insert(TABLE_REPRODUCTION, null, cv);
 		
@@ -1368,9 +1377,50 @@ public class DatabaseHelper {
 			return result;
 		
 	}
+
+	private byte[] img=null;
+	public Cursor getSheepImageBirth(){
+		Cursor c = ourDatabase.rawQuery("SELECT " + KEY_REPRODUCTION_IMAGE +
+		 		" FROM " + TABLE_REPRODUCTION +
+		 		" WHERE " + KEY_REPRODUCTION_ANIMAL + " = ? ", new String[]{"2"});
+		// String result = "";
+		
+		
+			
+		//	int iBirth = c.getColumnIndex("image_reproduction");
+		//	for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				//result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iDesc) + " " + c.getString(iImage) + " \n";
+			//	result = result + c.getString(iBirth) + " \n"; 
+				ReproductionObj reproduction;
+				if(c.moveToFirst()){
+					do{
+						img = c.getBlob(c.getColumnIndex(KEY_REPRODUCTION_IMAGE));
+			//	ReproductionObj reproduction = new ReproductionObj();
+			//	reproduction.setImage_reproduction(c.getBlob(7));
+					}while(c.moveToNext());
+
+					Bitmap b1 = BitmapFactory.decodeByteArray(img, 0, img.length);
+					
+				}
+				return c;
+				
+			}
 	
-	
-	
+	public class DbBitmapUtility {
+		
+		public byte[] getBytes(Bitmap bitmap){
+			
+			ByteArrayOutputStream stream =  new ByteArrayOutputStream();
+			bitmap.compress(CompressFormat.JPEG, 0, stream);
+			return stream.toByteArray();
+			
+		}
+		
+		public Bitmap getImage_reproduction(byte[] image){
+			return BitmapFactory.decodeByteArray(image, 0, image.length);
+		}
+	}
+				
 	
 	
 	

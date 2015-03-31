@@ -1,5 +1,7 @@
 package com.example.agdiagnose.reproduction;
 
+import java.io.ByteArrayOutputStream;
+
 import com.example.agdiagnose.Globals;
 import com.example.agdiagnose.R;
 import com.example.agdiagnose.R.id;
@@ -8,9 +10,15 @@ import com.example.agdiagnose.R.menu;
 import com.example.agdiagnose.database.DatabaseHelper;
 
 import android.support.v7.app.ActionBarActivity;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Breeding extends ActionBarActivity {
@@ -29,12 +37,20 @@ public class Breeding extends ActionBarActivity {
 			
 			TextView intro_breedingTv = (TextView) findViewById(R.id.intro_breeding_tv);
 	        TextView breedingTv = (TextView) findViewById(R.id.breeding_tv);
+	        
+	      /*  Bitmap b=BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+	        ByteArrayOutputStream bos=new ByteArrayOutputStream();
+	        b.compress(Bitmap.CompressFormat.PNG, 100, bos);
+	        image=bos.toByteArray();
+	        db=mdb.getWritableDatabase();  */
 	        DatabaseHelper info = new DatabaseHelper(this);
 	        info.open();
 	        String introdata = info.getCowIntroBreeding();
 	        String data = info.getCowBreeding();
+	      //  Cursor c = info.getSheepImageBirth();
 	        intro_breedingTv.setText(introdata);
 	        breedingTv.setText(data);
+	        
 	        info.close();
 	        
         }

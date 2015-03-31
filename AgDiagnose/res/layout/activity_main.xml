@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@color/Background" >
+    android:background="@color/Background">
 
    <Button
        android:id="@+id/sheepDiseasesView"
@@ -27,17 +27,6 @@
         android:onClick="contact"/>
 
     <Button
-        android:id="@+id/cowDiseasesView"
-        android:layout_width="170dp"
-        android:layout_height="110dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="111dp"
-        android:background="@drawable/search" 
-        android:onClick="searchDiseases"  />
-
-    <Button
         android:id="@+id/lambDiseasesView"
         android:layout_width="170dp"
         android:layout_height="110dp"
@@ -47,13 +36,15 @@
         android:background="@drawable/about"
         android:onClick="diagnose" />
 
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"
-        android:src="@drawable/agdiagnose_logo" />
+    <Button
+        android:id="@+id/cowDiseasesView"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/search"
+        android:onClick="searchDiseases" />
 
 </RelativeLayout>

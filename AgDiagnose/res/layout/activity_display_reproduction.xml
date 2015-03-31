@@ -1,19 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/Background" >
-    
-    
-    
-    <Button
-        android:id="@+id/cowReproductionView"
-        android:layout_width="170dp"
-        android:layout_height="150dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="107dp"
-        android:background="@drawable/cow" />
+    android:background="@color/Background">
     
      <Button
         android:id="@+id/sheepReproductionView"
@@ -24,9 +12,26 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/cowReproductionView"
         android:background="@drawable/sheep" />
-    
-    
-    
-    
 
+     <Button
+         android:id="@+id/cowReproductionView"
+         android:layout_width="170dp"
+         android:layout_height="150dp"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginLeft="11dp"
+         android:layout_marginTop="141dp"
+         android:background="@drawable/cow" />
+     
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="50dp"
+          android:text="@string/choose_animal"
+          android:textColor="@color/Brown"
+          android:textSize="22sp" />
+     
 </RelativeLayout>

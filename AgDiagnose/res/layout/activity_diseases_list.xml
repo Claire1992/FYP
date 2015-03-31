@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.example.agdiagnose.diseases.DiseasesList"
-    android:background="@color/Background" >
+    android:background="@color/Background">
 
     <ListView
         android:id="@+id/diseasesList"
