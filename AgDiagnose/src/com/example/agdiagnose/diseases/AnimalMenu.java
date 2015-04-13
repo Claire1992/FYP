@@ -2,6 +2,7 @@ package com.example.agdiagnose.diseases;
 
 
 
+import com.example.agdiagnose.MainActivity;
 import com.example.agdiagnose.R;
 import com.example.agdiagnose.R.id;
 import com.example.agdiagnose.R.layout;
@@ -28,7 +29,7 @@ public class AnimalMenu extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
- 		setContentView(R.layout.activity_display_diseases);
+ 		setContentView(R.layout.activity_display_animals);
 		
 		
 		cowView = (Button) findViewById(R.id.cowDiseasesView);
@@ -62,6 +63,13 @@ public class AnimalMenu extends Activity implements OnClickListener {
 		
 		
 	}
+	
+	/**Called when the user clicks the menu button**/
+    public void menu(View view){
+    	Intent intent = new Intent(this, MainActivity.class);
+    	startActivity(intent);
+    }
+   
 	public void onClick(View view) {
 		// TODO Auto-generated method stub
 		switch (view.getId()){

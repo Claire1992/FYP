@@ -9,99 +9,102 @@
     android:orientation="vertical"
     android:background="@color/Background">
     
- 
-   
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:text="AgDiagnose is aimed for farmers who own cows, cattle and or sheep. It allows users to search diseases and learn about treatment and control of such diseases. Reprouction information for cows, cattle and sheep is also available with information on breeding, gestation and birth. Cant find a vet? AgDiagnsoe comes equipt with a map of vets along with their contact details. AgDiagnose is a helpful and informative tool in diagnosing diseases in cattle and sheep. But more importantly it is developed by a farmer&apos;s daughter who understands a farmer&apos;s busy and challenging daily encounters with animals on the farm. " />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="AgDiagnose is aimed for farmers who own cows, cattle and or sheep. It allows users to search diseases and learn about treatment and control of such diseases. Reprouction information for cows, cattle and sheep is also available with information on breeding, gestation and birth. Cant find a vet? AgDiagnsoe comes equipt with a map of vets along with their contact details. AgDiagnose is a helpful and informative tool in diagnosing diseases in cattle and sheep. But more importantly it is developed by a farmer&apos;s daughter who understands a farmer&apos;s busy and challenging daily encounters with animals on the farm. " />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:text="All disease and reproduction information are referenced from links below. Users wishing to learn more about diseases and or reproduction information should click on links below. " />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="All disease and reproduction information are referenced from links below. Users wishing to learn more about diseases and or reproduction information should click on links below. " />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:text="http://www.thecattlesite.com/diseaseinfo/"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/lambs" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:text="http://www.sheep101.info/201/diseasesa-z.html"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:text="http://www.thecattlesite.com/diseaseinfo/"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:text="http://www.farmersjournal.ie/"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:text="http://www.sheep101.info/201/diseasesa-z.html"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:text="http://www.nadis.org.uk/"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:text="http://www.farmersjournal.ie/"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:text="http://www.ifa.ie/"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:text="http://www.nadis.org.uk/"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:text="http://www.irishvetjournal.org/"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:text="http://www.ifa.ie/"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
- </LinearLayout>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:text="http://www.irishvetjournal.org/"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
 
 </ScrollView>

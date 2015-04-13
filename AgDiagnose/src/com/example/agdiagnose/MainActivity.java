@@ -1,8 +1,8 @@
 package com.example.agdiagnose;
 
+import com.example.agdiagnose.about.DisplayDiagnoseActivity;
 import com.example.agdiagnose.contact.DisplayContactActivity;
 import com.example.agdiagnose.database.DatabaseHelper;
-import com.example.agdiagnose.diagnose.DisplayDiagnoseActivity;
 import com.example.agdiagnose.diseases.AnimalMenu;
 import com.example.agdiagnose.reproduction.DisplayReproductionActivity;
 
@@ -16,14 +16,14 @@ import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
-	public final static String EXTRA_MESSAGE = "com.example.agdiagnose.DISEASES";
+	//public final static String EXTRA_MESSAGE = "com.example.agdiagnose.DISEASES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
- /* 
+/* 
         DatabaseHelper info = new DatabaseHelper(this);
         info.open();
         
@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
   
         
         info.close();
- */      
+*/      
      
     }
 

@@ -14,6 +14,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 import com.example.agdiagnose.Globals;
+import com.example.agdiagnose.MainActivity;
 import com.example.agdiagnose.R;
 import com.example.agdiagnose.database.DatabaseHelper;
 
@@ -351,12 +352,18 @@ public class DiseasesList extends ActionBarActivity {
 	}
 	
 
-	
+	/*
 	public void onClick(View view) {
 			Intent disease_intent = new Intent(this, Diseases.class);
 			startActivity(disease_intent);
 	}
+	*/
 	
+	/**Called when the user clicks the menu button**/
+    public void menu(View view){
+    	Intent intent = new Intent(this, MainActivity.class);
+    	startActivity(intent);
+    }
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

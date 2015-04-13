@@ -55,7 +55,7 @@
                 android:value="com.example.agdiagnose.MainActivity" />
         </activity>
         <activity
-            android:name=".diagnose.DisplayDiagnoseActivity"
+            android:name="com.example.agdiagnose.about.DisplayDiagnoseActivity"
             android:label="@string/title_activity_display_diagnose"
             android:parentActivityName=".MainActivity" >
             <meta-data

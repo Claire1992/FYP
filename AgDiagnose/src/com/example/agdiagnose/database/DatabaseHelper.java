@@ -208,9 +208,9 @@ public class DatabaseHelper {
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_DISEASES_ID, "1");
 		cv.put(KEY_DISEASES_NAME, "Bluetongue");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Bluetonge is an insect-borne viral disease. It is not contagious but is transferred by insect vectors.");
-		cv.put(KEY_DISEASES_SYMPTOMS, "The keys symptoms include fever, excessive salivation and nasel discharge. In acute cases the lips and tongue become swollen. Lameness may also occur.");
-		cv.put(KEY_DISEASES_TREATMENT, "There is no efficient treatment. The bluetongue virus does not survive outside the insect vectors. Prevention includes quarantine and movement controls to prevent the spread of the disease.");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Bluetonge is an insect-borne viral disease. Sheep are usually the most affected, cattle are the main carrier of the disease. Bluetonge is a notifiable disease and any suspected cases must be reported. There has been widespread outbreaks of Bluetongue in Greece, Italy and Spain. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "The virus is transmitted by biting midges. The keys symptoms include fever, excessive salivation and nasel discharge. In acute cases the lips and tongue become swollen. Lameness may also occur.");
+		cv.put(KEY_DISEASES_TREATMENT, "There is no efficient treatment. The bluetongue virus does not survive outside the insect vectors. Prevention includes quarantine and movement controls to prevent the spread of the disease. Vaccines are used worldwide to control the disease. ");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
@@ -218,22 +218,22 @@ public class DatabaseHelper {
 		cv.put(KEY_DISEASES_NAME, "Foot Rot");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Foot Rot is a hoof infection which is extremely painful and contagious. It occurs in the area between the two toes of the animal and can spred to the whole herd. It is caused by bacteria (Fusobacterium necrophorum and Bacteroides melaninogenicus) in the soil.");
 		cv.put(KEY_DISEASES_SYMPTOMS, "Skin between the claws of the hoof begins to swell, skin between toes are very red and tender, lameness, foul odor from infected foot");
-		cv.put(KEY_DISEASES_TREATMENT, "The infected animal should be isolated from others. Clean and trim the foot. Penicillian is commonly used to treat foot rot. The infected animal should be kept dry until healing has occured. If there are no signs of recovery after 4 days, the bacteria could have infected teh other tissues if the foot.");
+		cv.put(KEY_DISEASES_TREATMENT, "The infected animal should be isolated from others. Clean and trim the foot. Penicillian is commonly used to treat foot rot. The infected animal should be kept dry until healing has occured. If there are no signs of recovery after 4 days, the bacteria could have infected the other tissues of the foot.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
 		cv.put(KEY_DISEASES_ID, "3");
 		cv.put(KEY_DISEASES_NAME, "Calf Diphtheria");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Calf Diphtheria consists of two forms; acute oral infection which affects calves less than 3 months old, the other form which is seen in older calves affects the larynx. Both types are caused by the bacteria Fusobacterium necrophorum. ");
-		cv.put(KEY_DISEASES_SYMPTOMS, "Oral form symptoms include; swollen cheek, fould smelling ulceration inside of mouth, high temperature, coughing, loss of appetite, depression, pneumonia. Laryngeal form may have the following symptoms; coughing, high temperature, loss of appetite, difficult breathing and chewing and pneumonia. ");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Oral form symptoms include; swollen cheek, foul smelling ulceration inside of mouth, high temperature, coughing, loss of appetite, depression, pneumonia. Laryngeal form may have the following symptoms; coughing, high temperature, loss of appetite, difficulty breathing and chewing and pneumonia. ");
 		cv.put(KEY_DISEASES_TREATMENT, "Antibiotics and painkillers are an effective treatment. Isolate the infected animal from other animals. If animals are closely confined, the spread of this infectious disease can be prevented by thoroughly cleaning and disinfecting of all calf feeders.Young calves must be examined daily to identify early stages of the disease.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 	
 		cv.put(KEY_DISEASES_ID, "4");
 		cv.put(KEY_DISEASES_NAME, "Bovine Tuberculosis (TB)");
-		cv.put(KEY_DISEASES_DESCRIPTION, "Bovine Tuberculosis is caused by the bacterium Mycobacterium bovis. The bacteria can survive in a wide range of acids and alkalis. Bovine tuberculosis is a zoonotic disease and causes tuberculosis in human. The disease can be transmitted in raw milk but pasteurisation effectively prevents the spread via milk.");
-		cv.put(KEY_DISEASES_SYMPTOMS, "Bovine tuberculosis usually has a prolonged course, and symptoms take months or years to appear. The following symptoms include weakness, loss of appetite, weight loss, fuctuating fever, cough, diarrhoea and large lymph nodes");
+		cv.put(KEY_DISEASES_DESCRIPTION, "Bovine Tuberculosis is caused by the bacterium Mycobacterium bovis. The bacteria can survive in a wide range of acids and alkalis. Bovine tuberculosis is a zoonotic disease and causes tuberculosis in humans. The disease can be transmitted in raw milk but pasteurisation effectively prevents the spread via milk.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "Bovine tuberculosis usually has a prolonged course, and symptoms take months or years to appear. The following symptoms include weakness, loss of appetite, weight loss, fluctuating fever, cough, diarrhoea and large lymph nodes");
 		cv.put(KEY_DISEASES_TREATMENT, "The method of detection is the tuberculin test where a small amounnt of antigen is injected into the skin. The control measure applied is test and slaughter. Treatment of infected animals is rarely attempted because of the high cost, lengthy time and the larger goal of eliminating the disease.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
@@ -282,7 +282,7 @@ public class DatabaseHelper {
 		cv.put(KEY_DISEASES_NAME, "Johne's Disease");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Johne’s disease is an infectious bacterial disease. It usually strikes during the first few weeks of life following the consummption of milk/food contaminated with bacteria. The disease is usually spread from an infected animal or infected material.");
 		cv.put(KEY_DISEASES_SYMPTOMS, "It is slow to progress but many symptoms include; diarrhea, weight loss despite good appetite and bottle jaw.");
-		cv.put(KEY_DISEASES_TREATMENT, "There is no treatment for Johne's disease as the animal will continue to deteriorate. Prevention is the only way and this is doen by testing sick looking animals and isolating them from farm. Vaccinations are available also. ");
+		cv.put(KEY_DISEASES_TREATMENT, "There is no treatment for Johne's disease as the animal will continue to deteriorate. Prevention is the only way and this is done by testing sick looking animals and isolating them from farm. Vaccinations are available also. ");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
@@ -298,8 +298,8 @@ public class DatabaseHelper {
 		cv.put(KEY_DISEASES_ID, "12");
 		cv.put(KEY_DISEASES_NAME, "Orf Virus");
 		cv.put(KEY_DISEASES_DESCRIPTION, "Orf is a highly contagious viral disease. It forms as scaby lesions on the lips and nostrils of the animal. It can be transmitted to humans. It mainly affects young stock. The scabs of infected animals contain virus, can fall off, remain in the environment and serve as a source of infection to susceptible animals. ");
-		cv.put(KEY_DISEASES_SYMPTOMS, "At the early stages of the infection, sores appear as blisters and then develop as crusty scrabs. The sores are usually located on the lips, muzzle and in the mouth. Young stock may have difficulty nursing.");
-		cv.put(KEY_DISEASES_TREATMENT, "There are vaccination available but should only be considered for previously infected flocks. Prevention involves quarentine of new new animals until orf is ruled out and also try to avoid bringing animals to public events, eg fairs.");
+		cv.put(KEY_DISEASES_SYMPTOMS, "At the early stages of the infection, sores appear as blisters and then develop as crusty scabs. The sores are usually located on the lips, muzzle and in the mouth. Young stock may have difficulty nursing.");
+		cv.put(KEY_DISEASES_TREATMENT, "There are vaccinations available but should only be considered for previously infected flocks. Prevention involves quarentine of new animals until orf is ruled out and also try to avoid bringing animals to public events, eg fairs.");
 		cv.put(KEY_DISEASES_IMAGE, "image");
 		ourDatabase.insert(TABLE_DISEASES, null, cv);
 		
@@ -641,7 +641,7 @@ public class DatabaseHelper {
 		cv.put(KEY_INTRO_REPRODUCTION_BREEDING, "Rams need to be in good condition before mating as they eat very little during mating and subsequently lose weight. The production of sperm in the ram can take up to 6 to 7 weeks. The farmer should aim to have routine health treatments done on the ewes before prior to mating. ");
 		cv.put(KEY_REPRODUCTION_BREEDING, "There is a hugh increase in breeding ewe lambs ad they have the potential to increase the output of the flock. Ewe lambs should only breed when they have achieved 60% of their mature weight, having a weight of 45 to 50kg. Do not over feed ewe as this can have a negative impact on embryo survival. Ewe lambs should be put into a separate flock after mating. Limit the mating period to three or four weeks and scan the ewe lambs and feed according to litter size. If ewe lambs do not achieve the desired mature weight at mating the following year, their performance will be comprimised, therefore they need to graze on the best quality grass from lambing until they are ready to be mated again. The use of a teaser ram 14 days prior to the start of mating can help to compact the lambing period.   ");
 		cv.put(KEY_INTRO_REPRODUCTION_GESTATION, "The average gestation length in a sheep is about 142 to 152 days. However it does depend on the breed of the sheep. Ewes carrying multiple lambs tend to have shorter gestations. Male lambs and heavy birth weight lambs are usually carried longer than female lambs. ");
-		cv.put(KEY_REPRODUCTION_GESTATION, "The first 30 days of gestation are critical as it has the highest rate of embryonic mortality. Shearing, vaccinating i.e.anything stressful should not be carried out during the first 30 of gestation. Ultrasonic pregnancy scanning can be performed on ewes from 35 to 65 days after breeding. Nutrition levels for sheep should be raised for the first 15 weeks. The majority of the growth of the foetus takes place during the last 4 to 6 weeks of gestation. Ewes on a poor nutritional dies are prone to pregnancy toxemia. Nutrition in late-pregnancy affects the size and vigor of lambs and the milk producing ability of the ewe.  ");
+		cv.put(KEY_REPRODUCTION_GESTATION, "The first 30 days of gestation are critical as it has the highest rate of embryonic mortality. Shearing, vaccinating i.e.anything stressful should not be carried out during the first 30 days of gestation. Ultrasonic pregnancy scanning can be performed on ewes from 35 to 65 days after breeding. Nutrition levels for sheep should be raised for the first 15 weeks. The majority of the growth of the foetus takes place during the last 4 to 6 weeks of gestation. Ewes on a poor nutritional diet are prone to pregnancy toxemia. Nutrition in late-pregnancy affects the size and vigor of lambs and the milk producing ability of the ewe.  ");
 		cv.put(KEY_INTRO_REPRODUCTION_BIRTH, "Lambing consists of three stages. In the first stage, the cervix dialates. This stage could last from 3 to 4 hours and in the latter part a clear white discharge will appear. This indicates that lambing has begun. ");
 		cv.put(KEY_REPRODUCTION_BIRTH, "As labour progresses, the ewe spends the maority of the time lying on her side. After a while a large waterbag appears, it then breaks and releases the water. At this stage the nose and front feet of the lamb can be felt. The lamb is then expelled. If a ewe is having more than one lamb, the same sequence still applies. The last stage involves the expulsion of the placenta. It is usually released 30 to 60 minutes after the delivery of the last lamb. If the placenta is not expelled after 24 hours, there may be a problem. The ewe's instincts tell her to eat the placenta to hide evidence of lambing from predators. The placenta should be removed to stop the spread disease.  ");
 		cv.put(KEY_REPRODUCTION_IMAGE, "/AgDiagnose/res/drawable-hdpi/sheep.jpg");

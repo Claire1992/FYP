@@ -1,6 +1,7 @@
 package com.example.agdiagnose.diseases;
 
 import com.example.agdiagnose.Globals;
+import com.example.agdiagnose.MainActivity;
 import com.example.agdiagnose.R;
 
 
@@ -56,6 +57,13 @@ public class SheepCategory extends ActionBarActivity implements OnClickListener 
 		return super.onOptionsItemSelected(item);
 	}
 	
+	
+	/**Called when the user clicks the menu button**/
+    public void menu(View view){
+    	Intent intent = new Intent(this, MainActivity.class);
+    	startActivity(intent);
+    }
+   
 	public void onClick(View view) {
 		// TODO Auto-generated method stub
 		switch (view.getId()){

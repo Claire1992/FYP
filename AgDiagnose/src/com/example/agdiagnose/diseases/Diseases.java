@@ -1,5 +1,6 @@
 package com.example.agdiagnose.diseases;
 
+import com.example.agdiagnose.MainActivity;
 import com.example.agdiagnose.R;
 import com.example.agdiagnose.R.id;
 import com.example.agdiagnose.R.layout;
@@ -12,6 +13,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class Diseases extends ActionBarActivity {
@@ -55,16 +57,16 @@ public class Diseases extends ActionBarActivity {
 		Symptoms_tv.setText(symptoms);
 		Treatments_tv.setText(treatment);
 		
-
-		
-		
-		
-		
-		
-		
 		
 	}
 
+	
+	/**Called when the user clicks the menu button**/
+    public void menu(View view){
+    	Intent intent = new Intent(this, MainActivity.class);
+    	startActivity(intent);
+    }
+    
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

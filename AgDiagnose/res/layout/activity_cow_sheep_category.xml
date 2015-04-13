@@ -6,31 +6,6 @@
     android:background="@color/Background" >
 
     <Button
-        android:id="@+id/resp_btn"
-        android:layout_width="170dp"
-        android:layout_height="110dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="111dp"
-        android:background="@drawable/buttonshape"
-        android:text="Respiratory"
-        android:textColor="#FFFDCC"
-        android:textSize="25sp" />
-
-    <Button
-        android:id="@+id/skin_btn"
-        android:layout_width="170dp"
-        android:layout_height="110dp"
-        android:layout_alignBottom="@+id/resp_btn"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/buttonshape"
-        android:text="Skin, Eyes and Feet "
-        android:textColor="#FFFDCC"
-        android:textSize="25sp" />
-
-    <Button
         android:id="@+id/vir_btn"
         android:layout_width="170dp"
         android:layout_height="110dp"
@@ -52,5 +27,51 @@
         android:text="Reproductive"
         android:textColor="#FFFDCC"
         android:textSize="25sp" />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/menu"
+        android:onClick="menu" />
+
+    <Button
+        android:id="@+id/resp_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="94dp"
+        android:layout_toLeftOf="@+id/skin_btn"
+        android:background="@drawable/buttonshape"
+        android:text="Respiratory"
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/skin_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_above="@+id/vir_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/buttonshape"
+        android:text="Skin, Eyes and Feet "
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="Choose a category"
+        android:textColor="@color/Brown"
+        android:textSize="22sp" 
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

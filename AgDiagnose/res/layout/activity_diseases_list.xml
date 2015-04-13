@@ -10,10 +10,20 @@
     tools:context="com.example.agdiagnose.diseases.DiseasesList"
     android:background="@color/Background">
 
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/menu"
+        android:onClick="menu" />
+
     <ListView
         android:id="@+id/diseasesList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="450dp" >
     </ListView>
 
 </LinearLayout>
