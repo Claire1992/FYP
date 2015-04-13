@@ -39,18 +39,6 @@
         android:onClick="menu" />
 
     <Button
-        android:id="@+id/resp_btn"
-        android:layout_width="170dp"
-        android:layout_height="110dp"
-        android:layout_below="@+id/menu"
-        android:layout_marginTop="94dp"
-        android:layout_toLeftOf="@+id/skin_btn"
-        android:background="@drawable/buttonshape"
-        android:text="Respiratory"
-        android:textColor="#FFFDCC"
-        android:textSize="25sp" />
-
-    <Button
         android:id="@+id/skin_btn"
         android:layout_width="170dp"
         android:layout_height="110dp"
@@ -73,5 +61,17 @@
         android:textColor="@color/Brown"
         android:textSize="22sp" 
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/resp_btn"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="37dp"
+        android:layout_toLeftOf="@+id/skin_btn"
+        android:background="@drawable/buttonshape"
+        android:text="Respiratory"
+        android:textColor="#FFFDCC"
+        android:textSize="25sp" />
 
 </RelativeLayout>
