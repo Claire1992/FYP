@@ -12,26 +12,35 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/cowReproductionView"
         android:background="@drawable/sheep" />
-
-     <Button
-         android:id="@+id/cowReproductionView"
-         android:layout_width="170dp"
-         android:layout_height="150dp"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginLeft="11dp"
-         android:layout_marginTop="141dp"
-         android:background="@drawable/cow" />
      
+        <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/agdiagnose_logo"
+        android:onClick="menu" />
+
       <TextView
           android:id="@+id/textView1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignParentTop="true"
+          android:layout_below="@+id/menu"
           android:layout_centerHorizontal="true"
-          android:layout_marginTop="50dp"
+          android:layout_marginTop="35dp"
           android:text="@string/choose_animal"
           android:textColor="@color/Brown"
           android:textSize="22sp" />
+
+      <Button
+          android:id="@+id/cowReproductionView"
+          android:layout_width="170dp"
+          android:layout_height="150dp"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="12dp"
+          android:background="@drawable/cow" />
      
 </RelativeLayout>

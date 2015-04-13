@@ -14,16 +14,28 @@
         android:id="@+id/imageButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="135dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="125dp"
         android:layout_marginTop="0dp"
-        android:background="@drawable/menu"
+        android:background="@drawable/agdiagnose_logo"
         android:onClick="menu" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Select disease for more info"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Brown" />
 
     <ListView
         android:id="@+id/diseasesList"
         android:layout_width="match_parent"
-        android:layout_height="450dp" >
+        android:layout_height="450dp"
+        android:layout_marginTop="5dp" >
+
     </ListView>
 
 </LinearLayout>

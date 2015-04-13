@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="135dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/menu"
+            android:background="@drawable/agdiagnose_logo"
             android:onClick="menu" />
 
         <TextView

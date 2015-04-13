@@ -29,15 +29,25 @@
         android:layout_alignBottom="@+id/calfDiseasesView"
         android:layout_alignLeft="@+id/sheepDiseasesView"
         android:background="@drawable/lamb" />
+    
+       <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/agdiagnose_logo"
+        android:onClick="menu" />
 
     <Button
         android:id="@+id/cowDiseasesView"
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="107dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="73dp"
         android:background="@drawable/cow" />
 
     <TextView
@@ -46,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/sheepDiseasesView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/choose_animal"
         android:textColor="@color/Brown"
         android:textSize="22sp" />

@@ -35,7 +35,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="7dp"
-        android:background="@drawable/menu"
+        android:background="@drawable/agdiagnose_logo"
         android:onClick="menu" />
 
     <Button
