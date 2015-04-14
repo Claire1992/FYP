@@ -35,24 +35,21 @@ public class ReproductiveInfo extends TabActivity implements OnTabChangeListener
         //TAB 1
         // Create  Intents to launch an Activity for the tab
         intent = new Intent().setClass(this, Breeding.class);
-        Tspec = tabHost.newTabSpec("First").setIndicator("")
-                      .setContent(intent);
+        Tspec = tabHost.newTabSpec("Breeding").setIndicator("").setContent(intent);
          
         //Add intent to tab
         tabHost.addTab(Tspec);
    
         //TAB2
         intent = new Intent().setClass(this, Gestation.class);
-        Tspec = tabHost.newTabSpec("Second").setIndicator("")
-                      .setContent(intent); 
+        Tspec = tabHost.newTabSpec("Gestation").setIndicator("") .setContent(intent); 
         
         //Add intent to tab
         tabHost.addTab(Tspec);
    
         //TAB3
         intent = new Intent().setClass(this, Birth.class);
-        Tspec = tabHost.newTabSpec("Third").setIndicator("")
-                      .setContent(intent);
+        Tspec = tabHost.newTabSpec("Birth").setIndicator("")  .setContent(intent);
        
         //Add intent to tab
         tabHost.addTab(Tspec);
